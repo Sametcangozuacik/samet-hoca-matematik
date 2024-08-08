@@ -64,7 +64,7 @@ export default function Header() {
                         href="/services/university"
                         onClick={(e) => toggleSubMenu(1, e)}
                     >
-                        <Image src={university} width={24} height={24} alt="home" />İlkokul
+                        <Image src={book} width={24} height={24} alt="home" />İlkokul
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 1 ? styles.subMenuOpen : ''}`}>
                         <li><Link className={styles.subMenuLink} href="/services/university1">1.Sınıf</Link></li>
@@ -80,7 +80,7 @@ export default function Header() {
                         href="/services/university"
                         onClick={(e) => toggleSubMenu(2, e)}
                     >
-                        <Image src={university} width={24} height={24} alt="home" />Ortaokul
+                        <Image src={bookclosed} width={24} height={24} alt="home" />Ortaokul
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 2 ? styles.subMenuOpen : ''}`}>
                         <li><Link className={styles.subMenuLink} href="/services/university1">5.Sınıf</Link></li>
