@@ -90,19 +90,48 @@ export default function Header() {
                     </ul>
                 </li>
 
-                <li><Link className={styles.headerlink} href="/services"><Image src={bookopen} width={24} height={24} alt="home" />Liseye Hazırlık</Link></li>
-
                 <li className={styles.subMenuParent}>
                     <Link
                         className={styles.headerlink}
                         href="/services/university"
                         onClick={(e) => toggleSubMenu(3, e)}
                     >
-                        <Image src={university} width={24} height={24} alt="home" />Üniversiteye Hazırlık
+                        <Image src={bookopen} width={24} height={24} alt="home" />Lise
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 3 ? styles.subMenuOpen : ''}`}>
+                        <li><Link className={styles.subMenuLink} href="/services/university1">9.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/services/university2">10.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/services/university1">11.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/services/university1">12.Sınıf</Link></li>
+                    </ul>
+                </li>
+
+                <li className={styles.subMenuParent}>
+                    <Link
+                        className={styles.headerlink}
+                        href="/services/university"
+                        onClick={(e) => toggleSubMenu(4, e)}
+                    >
+                        <Image src={university} width={24} height={24} alt="home" />YKS
+                    </Link>
+                    <ul className={`${styles.subMenu} ${subMenuOpen === 4 ? styles.subMenuOpen : ''}`}>
                         <li><Link className={styles.subMenuLink} href="/services/university1">TYT</Link></li>
                         <li><Link className={styles.subMenuLink} href="/services/university2">AYT</Link></li>
+                    </ul>
+                </li>
+
+                <li className={styles.subMenuParent}>
+                    <Link
+                        className={styles.headerlink}
+                        href="/services/university"
+                        onClick={(e) => toggleSubMenu(5, e)}
+                    >
+                        <Image src={university} width={24} height={24} alt="home" />KPSS & ALES
+                    </Link>
+                    <ul className={`${styles.subMenu} ${subMenuOpen === 5 ? styles.subMenuOpen : ''}`}>
+                        <li><Link className={styles.subMenuLink} href="/services/university1">KPSS</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/services/university2">ALES</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/services/university2">DGS</Link></li>
                     </ul>
                 </li>
 
