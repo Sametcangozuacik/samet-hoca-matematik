@@ -49,6 +49,7 @@
 
 .headerlink {
   color: $secondary-color;
+  font-family: $primary-font;
   font-weight: 600;
   text-decoration: none;
   display: flex;
@@ -67,15 +68,16 @@
 
 .subMenu {
   list-style: none;
+  font-family: $primary-font;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: transparent;
   position: absolute;
   top: 100%;
   /* Position it directly below the button */
   left: 0;
   right: auto;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
   z-index: 5;
   display: none;
