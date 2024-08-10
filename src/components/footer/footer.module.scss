@@ -1,1 +1,153 @@
 @use "../../app/_variables.scss" as *;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; // Esnek genişlik sağlamak için flex kullanıyoruz
+    margin-bottom: 10px;
+}
+
+.colText {
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 0.75rem;
+    margin: -20px;
+    text-align: center;
+}
+
+.footerBox {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    gap: 10px;
+    font-size: 0.75rem;
+    align-items: center;
+    flex: 1; // Esnek genişlik sağlamak için flex kullanıyoruz
+}
+
+.footerBoxH2 {
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.footerBoxList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.footerBoxListLink {
+    display: flex;
+    align-items: center;
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 0.75rem;
+    text-decoration: none;
+    gap: 5px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.ınformSectionLinKTwo {
+    display: flex;
+    align-items: center;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    padding: 5px;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+.ınformSectionTwo {
+    display: flex;
+    margin-top: 2.5cqmax;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ınformSectionLink {
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footerBottom {
+    margin-top: 5px;
+    border-top: 1px solid $secondary-color;
+    text-align: center;
+}
+
+.footerBottomText {
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 0.75rem;
+    margin: 5px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footerBox {
+        margin-bottom: 20px; // Alt boşluk ekledik, böylece her bölüm arasında yer kalır
+    }
+
+    .footerBoxList {
+        align-items: center;
+    }
+
+    .ınformSectionTwo {
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .colText {
+        font-size: 0.65rem;
+    }
+
+    .footerBoxH2 {
+        font-size: 0.85rem;
+    }
+
+    .footerBoxListLink {
+        font-size: 0.65rem;
+    }
+
+    .footerBottomText {
+        font-size: 0.65rem;
+    }
+}
