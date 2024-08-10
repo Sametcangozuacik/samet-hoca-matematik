@@ -57,7 +57,7 @@ export default function Header() {
             </button>
             <ul className={`${styles.link} ${menuOpen ? styles.open : ''}`}>
                 <li><Link className={styles.headerlink} href="/"><Image src={home} width={24} height={24} alt="home" />Anasayfa</Link></li>
-                <li><Link className={styles.headerlink} href="/about"><Image src={about} width={24} height={24} alt="home" />Biz Kimiz ?</Link></li>
+                <li><Link className={styles.headerlink} href="/"><Image src={about} width={24} height={24} alt="home" />Biz Kimiz ?</Link></li>
 
                 <li className={styles.subMenuParent}>
                     <Link
@@ -136,7 +136,7 @@ export default function Header() {
                     </ul>
                 </li>
 
-                <li><Link className={styles.headerlink} href="/contact"><Image src={phone} width={24} height={24} alt="home" />İletişim</Link></li>
+                <li><Link className={styles.headerlink} href="/communication"><Image src={phone} width={24} height={24} alt="home" />İletişim</Link></li>
             </ul>
         </header>
     );

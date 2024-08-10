@@ -1,0 +1,120 @@
+@use "../../app/_variables.scss" as *;
+
+.contactPage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactPageH2 {
+    font-size: 1.8rem; /* Başlık boyutunu azaltalım */
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contactPageH3 {
+    font-size: 1.3rem; /* Alt başlık boyutunu azaltalım */
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:$primary-font;
+}
+
+.contactPageP {
+    font-size: 0.9rem; /* Paragraf yazı boyutunu azaltalım */
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+    font-family:$primary-font;
+}
+
+.contactPageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family:$primary-font;
+}
+
+.contactPageFormInput {
+    padding: 10px;
+    font-size: 0.9rem; /* Giriş alanı yazı boyutunu azaltalım */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+    font-family:$primary-font;
+
+    &:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+}
+
+.contactPageFormInput.subjectInput {
+    height: 80px; /* Danışmak İstediğiniz Konu alanı için yükseklik */
+    resize: none; /* Kullanıcının boyut değiştirmesini engeller */
+}
+
+.contactPageFormInputBtn {
+    padding: 12px;
+    font-size: 0.9rem; /* Buton yazı boyutunu azaltalım */
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-family:$primary-font;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+.contactPageSection {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px; /* Alanlar arasına boşluk azaltıldı */
+    text-align: center;
+}
+
+.ınformSectionTwo {
+    display: flex;
+    margin-top: 10px; /* Margin-top azaltıldı */
+    gap: 10px; /* Alanlar arasına boşluk azaltıldı */
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family:$primary-font;
+}
+
+.ınformSectionLink {
+    color: $secondary-color;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Margin-top azaltıldı */
+    gap: 5px;
+}
+
+.contactSectionPage{
+    display: flex;
+    gap: 20px;
+}
+
+.contactPageH1{
+    font-size:2rem;
+    color: $secondary-color;
+    font-family:$primary-font;
+    
+
+}

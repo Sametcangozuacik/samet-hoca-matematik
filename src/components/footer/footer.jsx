@@ -17,6 +17,7 @@ import lamp from '../../../public/footer/lampicon.svg';
 import policy from '../../../public/footer/policyicon.svg';
 import question from '../../../public/footer/questionicon.svg';
 import register from '../../../public/footer/registericon.svg';
+import location from '../../../public/CommunicationPage/location.icon.svg';
 
 
 export default function Footer() {
@@ -24,48 +25,73 @@ export default function Footer() {
         <main>
             <footer className={styles.footer}>
                 <div className={styles.col}>
-                    <Image className={styles.colImage} src={logo} width={150} height={150} alt="Site Logo" />
+                    <Image className={styles.colImage} src={logo} width={180} height={180} alt="Site Logo" />
                     <p className={styles.colText}>Matematiğe dair herşey !</p>
                     <div className={styles.ınformSectionTwo}>
                         <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
-                            <Image src={instagram} width={16} height={16} alt="Instagram" />
+                            <Image src={instagram} width={24
+                            } height={24
+                            } alt="Instagram" />
                         </a>
                         <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
-                            <Image src={youtube} width={16} height={16} alt="Youtube" />
+                            <Image src={youtube} width={24
+                            } height={24
+                            } alt="Youtube" />
                         </a>
                         <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
-                            <Image src={twiter} width={16} height={16} alt="Twiter" />
+                            <Image src={twiter} width={24
+                            } height={24
+                            } alt="Twiter" />
                         </a>
                     </div>
                 </div>
                 <div className={styles.footerBox}>
                     <h2 className={styles.footerBoxH2}>Eğitim</h2>
                     <ul className={styles.footerBoxList}>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={book} width={16} height={16} alt="home" />İlkokul</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={bookclosed} width={16} height={16} alt="home" />Ortaokul</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={bookopen} width={16} height={16} alt="home" />Liseye Hazırlık</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={university} width={16} height={16} alt="home" />Üniversiteye Hazırlık</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={kpss} width={16} height={16} alt="home" />KPSS & ALES</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={book} width={24
+                        } height={24
+                        } alt="home" />İlkokul</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={bookclosed} width={24
+                        } height={24
+                        } alt="home" />Ortaokul</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={bookopen} width={24
+                        } height={24
+                        } alt="home" />Liseye Hazırlık</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={university} width={24
+                        } height={24
+                        } alt="home" />Üniversiteye Hazırlık</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={kpss} width={24
+                        } height={24
+                        } alt="home" />KPSS & ALES</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerBox}>
                     <h2 className={styles.footerBoxH2}>Hakkında</h2>
                     <ul className={styles.footerBoxList}>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={question} width={16} height={16} alt="home" />Biz Kimiz ?</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={lamp} width={16} height={16} alt="home" />Aydınlatma Metni</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={policy} width={16} height={16} alt="home" />KVKK Politaları</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={register} width={16} height={16} alt="home" />Başvuru Formu</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={question} width={24
+                        } height={24
+                        } alt="home" />Biz Kimiz ?</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={lamp} width={24
+                        } height={24
+                        } alt="home" />Aydınlatma Metni</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={policy} width={24
+                        } height={24
+                        } alt="home" />KVKK Politaları</Link></li>
+                        <li><Link className={styles.footerBoxListLink} href=""><Image src={register} width={24
+                        } height={24
+                        } alt="home" />Başvuru Formu</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerBox}>
                     <h2 className={styles.footerBoxH2}>İletişim</h2>
                     <ul className={styles.footerBoxList}>
                         <a className={styles.ınformSectionLink} href="https://wa.me/5073195505" target="_blank" rel="noopener noreferrer">
-                            <Image src={whatsapp} width={16} height={16} alt="WhatsApp" />+90 507 319 5505
+                            <Image src={whatsapp} width={24} height={24} alt="WhatsApp" />+90 507 319 5505
                         </a>
                         <a className={styles.ınformSectionLink} href="mailto:lokasyonmatematik@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <Image src={gmail} width={16} height={16} alt="Gmail" />lokasyonmatematik@gmail.com
+                            <Image src={gmail} width={24} height={24} alt="Gmail" />lokasyonmatematik@gmail.com
                         </a>
+                        <p className={styles.ınformSectionLink}> <Image src={location} width={24} height={24} alt="Gmail" />Ankara, Türkiye</p>
                     </ul>
                 </div>
             </footer>
