@@ -11,6 +11,7 @@ import book from '../../../public/header/bookicon.svg';
 import bookopen from '../../../public/header/bookopenicon.svg';
 import bookclosed from '../../../public/header/bookclosedicon.svg';
 import university from '../../../public/header/universtyicon.svg';
+import kpss from '../../../public/header/kpssicon.svg';
 import phone from '../../../public/header/phoneicon.svg';
 import styles from './header.module.scss';
 
@@ -56,7 +57,7 @@ export default function Header() {
             </button>
             <ul className={`${styles.link} ${menuOpen ? styles.open : ''}`}>
                 <li><Link className={styles.headerlink} href="/"><Image src={home} width={24} height={24} alt="home" />Anasayfa</Link></li>
-                <li><Link className={styles.headerlink} href="/about"><Image src={about} width={24} height={24} alt="home" />Hakkımda</Link></li>
+                <li><Link className={styles.headerlink} href="/about"><Image src={about} width={24} height={24} alt="home" />Biz Kimiz ?</Link></li>
 
                 <li className={styles.subMenuParent}>
                     <Link
@@ -126,7 +127,7 @@ export default function Header() {
                         href="/services/university"
                         onClick={(e) => toggleSubMenu(5, e)}
                     >
-                        <Image src={university} width={24} height={24} alt="home" />KPSS & ALES
+                        <Image src={kpss} width={24} height={24} alt="home" />KPSS & ALES
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 5 ? styles.subMenuOpen : ''}`}>
                         <li><Link className={styles.subMenuLink} href="/services/university1">KPSS</Link></li>
