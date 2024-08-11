@@ -1,0 +1,64 @@
+@use "../../app/_variables.scss" as *;
+
+
+.oursContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .oursContent {
+    max-width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .oursContentLinkBox {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .oursContentLink {
+    display: block;
+    color: #1D2026;
+    text-decoration: none;
+    font-family: $primary-font;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+    &:hover {
+      background-color: #d0d0d0;
+      color: #000;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .oursContainer {
+      padding: 15px;
+    }
+  
+    .oursContent {
+      padding: 15px;
+    }
+  
+    .oursContentLinkBox {
+      gap: 10px;
+    }
+  
+    .oursContentLink {
+      font-size: 14px;
+    }
+  }
+  

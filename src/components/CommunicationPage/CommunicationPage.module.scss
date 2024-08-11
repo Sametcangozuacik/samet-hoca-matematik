@@ -7,6 +7,11 @@
     background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+        padding: 15px;
+        box-shadow: none;
+    }
 }
 
 .contactPageH2 {
@@ -14,6 +19,10 @@
     color: #333;
     text-align: center;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 }
 
 .contactPageH3 {
@@ -21,7 +30,12 @@
     color: #555;
     text-align: center;
     margin-bottom: 20px;
-    font-family:$primary-font;
+    font-family: $primary-font;
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
 }
 
 .contactPageP {
@@ -30,14 +44,23 @@
     line-height: 1.6;
     margin-bottom: 30px;
     text-align: justify;
-    font-family:$primary-font;
+    font-family: $primary-font;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
 }
 
 .contactPageForm {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-family:$primary-font;
+    font-family: $primary-font;
+
+    @media (max-width: 768px) {
+        gap: 10px;
+    }
 }
 
 .contactPageFormInput {
@@ -47,17 +70,26 @@
     border-radius: 5px;
     background-color: #fff;
     transition: border-color 0.3s ease;
-    font-family:$primary-font;
+    font-family: $primary-font;
 
     &:focus {
         border-color: #007bff;
         outline: none;
+    }
+
+    @media (max-width: 768px) {
+        padding: 8px;
+        font-size: 0.8rem;
     }
 }
 
 .contactPageFormInput.subjectInput {
     height: 80px; /* Danışmak İstediğiniz Konu alanı için yükseklik */
     resize: none; /* Kullanıcının boyut değiştirmesini engeller */
+
+    @media (max-width: 768px) {
+        height: 60px;
+    }
 }
 
 .contactPageFormInputBtn {
@@ -67,12 +99,17 @@
     background-color: #007bff;
     border: none;
     border-radius: 5px;
-    font-family:$primary-font;
+    font-family: $primary-font;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
         background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px;
+        font-size: 0.8rem;
     }
 }
 
@@ -83,6 +120,10 @@
     margin: 0 auto;
     gap: 10px; /* Alanlar arasına boşluk azaltıldı */
     text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
 }
 
 .ınformSectionTwo {
@@ -91,7 +132,12 @@
     gap: 10px; /* Alanlar arasına boşluk azaltıldı */
     flex-wrap: wrap;
     justify-content: center;
-    font-family:$primary-font;
+    font-family: $primary-font;
+
+    @media (max-width: 768px) {
+        gap: 8px;
+        margin-top: 5px;
+    }
 }
 
 .ınformSectionLink {
@@ -104,17 +150,28 @@
     align-items: center;
     margin-top: 5px; /* Margin-top azaltıldı */
     gap: 5px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
-.contactSectionPage{
+.contactSectionPage {
     display: flex;
     gap: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
-.contactPageH1{
-    font-size:2rem;
+.contactPageH1 {
+    font-size: 2rem;
     color: $secondary-color;
-    font-family:$primary-font;
-    
+    font-family: $primary-font;
 
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+    }
 }
