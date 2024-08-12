@@ -5,8 +5,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: rgba(248, 241, 233, 0.8); 
+  backdrop-filter: blur(8px); 
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
+
 
 .hamburger {
   background: #f8f1e9;

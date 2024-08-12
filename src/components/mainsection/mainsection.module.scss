@@ -1,0 +1,55 @@
+@use "../../app/_variables.scss" as *;
+
+.mainSection{
+    padding: 20px;
+    border-radius: 10px;
+    gap: 150px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $primary-font;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px; // Küçük ekranlar için boşluk
+        padding: 10px;
+        margin: 10px;
+    }
+}
+.mainSectionDescription {
+    color: $secondary-color;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: justify;  // Metni iki yana yaslar
+}
+
+.mainSectionImage {
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 20%;
+
+    @media (max-width: 768px) {
+        max-width: 250px;
+        max-height: 200px;
+    }
+}
+
+.mainSectionButton { 
+    border: 2px solid $secondary-color; /* Kenarlık kalınlığı ve rengi */
+    color: white; /* Metin rengi */
+    padding: 10px;
+    border-radius: 10px; /* Köşe yuvarlama */
+    font-weight: 500; /* Font ağırlığı */
+    text-align: center; /* Metni ortalar */
+    display: inline-flex; /* Butonu hizalar */
+    align-items: center; /* Dikeyde ortalar */
+    justify-content: center; /* Yatayda ortalar */
+    transition: background-color 0.3s ease; /* Arka plan rengi geçiş efekti */
+    text-decoration: none; /* Alt çizgi kaldırır */
+
+    &:hover {
+        background-color: $secondary-color; /* Hover durumunda arka plan rengi */
+    }
+}

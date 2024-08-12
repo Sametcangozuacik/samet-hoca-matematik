@@ -1,0 +1,26 @@
+@use "../../app/_variables.scss" as *;
+
+.aboutUs {
+    background-color: $tertiary-color; // Arka plan rengi
+    color: #333; // Metin rengi
+    padding: 20px; // İç boşluk
+    border-radius: 10px; // Kenarları yuvarlama
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Gölgelendirme
+    max-width: 500px;
+  
+    h1 {
+      font-size: 2rem; // Başlık boyutu
+      color: $primary-color; // Başlık rengi
+      margin-bottom: 15px; // Alt boşluk
+      text-align: center; // Ortaya hizalama
+      font-family: $primary-font;
+    }
+  
+    p {
+      font-size: 1rem; // Paragraf yazı boyutu
+      line-height: 1.6; // Satır aralığı
+      text-align: justify; // Yazı hizalama
+      color: $secondary-color; // Paragraf metin rengi
+      font-family: $primary-font;
+    }
+  }
