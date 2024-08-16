@@ -68,10 +68,10 @@ export default function Header() {
                         <Image src={book} width={24} height={24} alt="home" />İlkokul
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 1 ? styles.subMenuOpen : ''}`}>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">1.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university2">2.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">3.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">4.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/primaryschool/firstclass">1.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/primaryschool/secondclass">2.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/primaryschool/thirdclass">3.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/primaryschool/fourclass">4.Sınıf</Link></li>
                     </ul>
                 </li>
 
@@ -84,10 +84,10 @@ export default function Header() {
                         <Image src={bookclosed} width={24} height={24} alt="home" />Ortaokul
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 2 ? styles.subMenuOpen : ''}`}>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">5.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university2">6.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">7.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">8.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/middleschool/fifthgrade">5.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/middleschool/sixthgrade">6.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/middleschool/seventhgrade">7.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/middleschool/eighthgrade">8.Sınıf</Link></li>
                     </ul>
                 </li>
 
@@ -100,10 +100,10 @@ export default function Header() {
                         <Image src={bookopen} width={24} height={24} alt="home" />Lise
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 3 ? styles.subMenuOpen : ''}`}>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">9.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university2">10.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">11.Sınıf</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">12.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/highschool/ninthgrade">9.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/highschool/tenthgrade">10.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/highschool/eleventhgrade">11.Sınıf</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/highschool/twelfthgrade">12.Sınıf</Link></li>
                     </ul>
                 </li>
 

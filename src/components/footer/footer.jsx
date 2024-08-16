@@ -76,10 +76,7 @@ export default function Footer() {
                         } alt="home" />Aydınlatma Metni</Link></li>
                         <li><Link className={styles.footerBoxListLink} href=""><Image src={policy} width={24
                         } height={24
-                        } alt="home" />KVKK Politaları</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={register} width={24
-                        } height={24
-                        } alt="home" />Başvuru Formu</Link></li>
+                        } alt="home" />KVKK Politikaları</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerBox}>

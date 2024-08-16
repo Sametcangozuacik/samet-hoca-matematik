@@ -1,63 +1,82 @@
 @use "../../app/_variables.scss" as *;
 
+// ours.module.scss
 
 .oursContainer {
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: transparent; // Background color
+  border: 2px solid $secondary-color; // Secondary color border
+  border-radius: 10px;
+  max-height: 150px;
+  transition: background-color 0.3s ease; // Smooth transition for background color
+
+  &:hover {
+      background-color: #e0e0e0; // Slightly darker background on hover
   }
-  
-  .oursContent {
-    max-width: 300px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+}
+
+.oursContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oursContentLinkBox {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem; 
+}
+
+.oursContentLinkBox li {
+  margin: 0.5rem 0; // Space between list items
+  transition: background-color 0.3s ease; // Transition for background color
+
+  &:hover {
+      background-color: #f0f8ff; // Light background color on hover
+      border-radius: 5px; // Rounded corners on hover
   }
-  
-  .oursContentLinkBox {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+}
+
+.oursContentLink {
+  text-decoration: none;
+  color: #333; // Link color
+  font-size: 1.2rem; // Font size
+  position: relative;
+  padding: 0.5rem 1rem; // Added horizontal padding for better link appearance
+  transition: color 0.3s ease, transform 0.3s ease; // Transitions for color and scale
+
+  &::before {
+      content: "•"; // Dot character
+      position: absolute;
+      left: -1.5rem; // Position the dot to the left of the link
+      top: 50%;
+      transform: translateY(-50%); // Center the dot vertically
+      color: #0070f3; // Dot color
+      font-size: 1.5rem; // Adjust dot size as needed
   }
-  
-  .oursContentLink {
-    display: block;
-    color: #1D2026;
-    text-decoration: none;
-    font-family: $primary-font;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  
-    &:hover {
-      background-color: #d0d0d0;
-      color: #000;
-    }
+
+  &:hover {
+      color: #0070f3; // Hover color
+      transform: scale(1.05); // Slightly scale up on hover
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .oursContainer {
-      padding: 15px;
-    }
-  
-    .oursContent {
-      padding: 15px;
-    }
-  
-    .oursContentLinkBox {
-      gap: 10px;
-    }
-  
-    .oursContentLink {
-      font-size: 14px;
-    }
+
+  &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #0070f3; // Underline color
+      transform: scaleX(0);
+      transition: transform 0.3s ease; // Animation for underline
   }
-  
+
+  &:hover::after {
+      transform: scaleX(1); // Underline appears on hover
+  }
+}
