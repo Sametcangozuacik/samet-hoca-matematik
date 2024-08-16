@@ -1,10 +1,11 @@
 import React from "react";
+import EleventhGradePage from "@/components/eleventhgradePage/eleventhgradePage";
 
 
 export default function EleventhGrade() {
     return (
         <div>
-        <h1>Eleventh Grade</h1>
+        <EleventhGradePage />
         </div>
     );
     }

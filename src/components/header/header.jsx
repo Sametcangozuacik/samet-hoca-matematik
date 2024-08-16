@@ -116,8 +116,8 @@ export default function Header() {
                         <Image src={university} width={24} height={24} alt="home" />YKS
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 4 ? styles.subMenuOpen : ''}`}>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">TYT</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university2">AYT</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/preparationforuniversity/corecompetency">TYT</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/preparationforuniversity/fieldexam">AYT</Link></li>
                     </ul>
                 </li>
 
@@ -130,9 +130,8 @@ export default function Header() {
                         <Image src={kpss} width={24} height={24} alt="home" />KPSS & ALES
                     </Link>
                     <ul className={`${styles.subMenu} ${subMenuOpen === 5 ? styles.subMenuOpen : ''}`}>
-                        <li><Link className={styles.subMenuLink} href="/services/university1">KPSS</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university2">ALES</Link></li>
-                        <li><Link className={styles.subMenuLink} href="/services/university2">DGS</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/postuniversity/publicpersonnelexam">KPSS</Link></li>
+                        <li><Link className={styles.subMenuLink} href="/postuniversity/alesexam">ALES</Link></li>
                     </ul>
                 </li>
 

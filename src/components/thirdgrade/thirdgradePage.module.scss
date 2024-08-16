@@ -8,11 +8,11 @@ $background-color: #f8f1e9;
   color: darken($secondary-color, 20%);
   text-align: center;
   margin: 1.5rem 0;
-  text-transform: uppercase; // Adjusted for a modern look
   letter-spacing: 1.5px; // Added for better readability
   font-weight: 700;
   border-bottom: 3px solid $primary-color; // Slightly thicker for emphasis
   padding-bottom: 0.75rem; // More padding for balance
+  font-family: $primary-font;
 }
 
 .container {

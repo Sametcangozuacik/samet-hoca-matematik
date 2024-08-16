@@ -8,40 +8,43 @@ $background-color: #f8f1e9;
   color: darken($secondary-color, 20%);
   text-align: center;
   margin: 1.5rem 0;
-  text-transform: none;
+  letter-spacing: 1.5px; // Added for better readability
   font-weight: 700;
-  border-bottom: 2px solid $primary-color;
-  padding-bottom: 0.5rem;
+  border-bottom: 3px solid $primary-color; // Slightly thicker for emphasis
+  padding-bottom: 0.75rem; // More padding for balance
+  font-family: $primary-font;
 }
 
 .container {
-  display: grid; // Grid sistemi kullanarak iki sütun oluşturma
+  display: grid; 
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  padding: 2rem;
-  background-color: $background-color; 
-  color: darken($secondary-color, 10%);
+  gap: 1.5rem; // Slightly increased for better spacing
+  padding: 2.5rem; // More padding for a more spacious feel
+  background-color: $background-color;
+  color: darken($secondary-color, 15%); // Slightly darker for contrast
   margin: 20px auto;
-  border-radius: 10px;
-  max-width: 800px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; // Increased for a smoother look
+  max-width: 850px; // Increased width for larger screens
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); // Increased shadow for depth
 
   p {
     background-color: $tertiary-color;
     font-family: $primary-font;
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1.75rem; // More padding for comfort
+    border-radius: 10px; // Increased for a smoother feel
     text-align: left;
-    line-height: 1.6;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease;
+    line-height: 1.8; // Increased for better readability
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); // Slightly more shadow for depth
+    transition: background-color 0.3s ease, transform 0.2s ease; // Added smooth hover effect
 
     &:hover {
       background-color: lighten($tertiary-color, 5%);
+      transform: translateY(-2px); // Subtle lift on hover
     }
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: 1fr; // Küçük ekranlar için tek sütuna geçiş
+    grid-template-columns: 1fr;
+    padding: 1.5rem; // Reduced padding for smaller screens
   }
 }
