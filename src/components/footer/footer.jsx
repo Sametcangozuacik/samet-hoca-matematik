@@ -16,7 +16,7 @@ import kpss from '../../../public/footer/kpssicon.svg';
 import lamp from '../../../public/footer/lampicon.svg';
 import policy from '../../../public/footer/policyicon.svg';
 import question from '../../../public/footer/questionicon.svg';
-import register from '../../../public/footer/registericon.svg';
+import instagramicon from '../../../public/footer/instagramicon.svg';
 import location from '../../../public/CommunicationPage/location.icon.svg';
 
 
@@ -28,7 +28,7 @@ export default function Footer() {
                     <Image className={styles.colImage} src={logo} width={180} height={180} alt="Site Logo" />
                     <p className={styles.colText}>Matematiğe dair herşey !</p>
                     <div className={styles.ınformSectionTwo}>
-                        <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
+                        <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/lokasyonmatematik?igsh=MW10bmFnN25xODVtdw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                             <Image src={instagram} width={24
                             } height={24
                             } alt="Instagram" />
@@ -68,10 +68,10 @@ export default function Footer() {
                 <div className={styles.footerBox}>
                     <h2 className={styles.footerBoxH2}>Hakkında</h2>
                     <ul className={styles.footerBoxList}>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={question} width={24
+                        <li><Link className={styles.footerBoxListLink} href="/ours"><Image src={question} width={24
                         } height={24
                         } alt="home" />Biz Kimiz ?</Link></li>
-                        <li><Link className={styles.footerBoxListLink} href=""><Image src={lamp} width={24
+                        <li><Link className={styles.footerBoxListLink} href="/lighting"><Image src={lamp} width={24
                         } height={24
                         } alt="home" />Aydınlatma Metni</Link></li>
                         <li><Link className={styles.footerBoxListLink} href=""><Image src={policy} width={24
@@ -87,6 +87,9 @@ export default function Footer() {
                         </a>
                         <a className={styles.ınformSectionLink} href="mailto:lokasyonmatematik@gmail.com" target="_blank" rel="noopener noreferrer">
                             <Image src={gmail} width={24} height={24} alt="Gmail" />lokasyonmatematik@gmail.com
+                        </a>
+                        <a className={styles.ınformSectionLink} href="https://www.instagram.com/lokasyonmatematik?igsh=MW10bmFnN25xODVtdw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                            <Image src={instagramicon} width={24} height={24} alt="WhatsApp" />lokasyonmatematik
                         </a>
                         <p className={styles.ınformSectionLink}> <Image src={location} width={24} height={24} alt="Gmail" />Ankara, Türkiye</p>
                     </ul>

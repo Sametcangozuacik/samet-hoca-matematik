@@ -2,25 +2,31 @@
 
 .aboutUs {
   border: 2px solid $secondary-color; // Kenar çizgisi
-  color: #333; // Metin rengi
-  padding: 20px; // İç boşluk
-  border-radius: 10px; // Kenarları yuvarlama
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Gölgelendirme
-  max-width: 500px;
+  color: $secondary-color; // Metin rengi
+  padding: 2rem; // İç boşluk
+  border-radius: 12px; // Daha yuvarlak kenarlar
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // Hafif gölgelendirme
+  max-width: 1000px; // Daha geniş bir maksimum genişlik
+  background-color: #f9f9f9; // Arka plan rengi
+  margin: auto; // Ortaya hizalama
+  transition: box-shadow 0.3s ease, transform 0.3s ease; // Geçiş efektleri
 
   h1 {
-    font-size: 2rem; // Başlık boyutu
+    font-size: 2.2rem; // Başlık boyutu
     color: $primary-color; // Başlık rengi
-    margin-bottom: 15px; // Alt boşluk
+    margin-bottom: 1rem; // Alt boşluk
     text-align: center; // Ortaya hizalama
     font-family: $primary-font;
+    font-weight: bold; // Başlık için kalın yazı tipi
   }
 
   p {
-    font-size: 1rem; // Paragraf yazı boyutu
-    line-height: 1.6; // Satır aralığı
+    font-size: 1.1rem; // Paragraf yazı boyutu
+    line-height: 1.8; // Satır aralığı
     text-align: justify; // Yazı hizalama
     color: $secondary-color; // Paragraf metin rengi
     font-family: $primary-font;
+    margin: 0; // Paragraflar arasında boşluk bırakma
+    padding: 0.5rem 0; // Paragraflara iç boşluk ekleme
   }
 }

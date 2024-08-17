@@ -13,11 +13,13 @@ import bookclosed from '../../../public/header/bookclosedicon.svg';
 import university from '../../../public/header/universtyicon.svg';
 import kpss from '../../../public/header/kpssicon.svg';
 import phone from '../../../public/header/phoneicon.svg';
+import costumer from '../../../public/header/customericon.svg';
 import styles from './header.module.scss';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [subMenuOpen, setSubMenuOpen] = useState(null); // To track which submenu is open
+    const [windowWidth, setWindowWidth] = useState(0); // To track window width
     const headerRef = useRef(null);
 
     const toggleMenu = () => {
@@ -49,9 +51,30 @@ export default function Header() {
         };
     }, [menuOpen]);
 
+    // Handle window resize
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        handleResize(); // Set initial width
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <header className={styles.header} ref={headerRef}>
             <Image src={logo} width={200} height={200} alt="Site Logo" />
+            {windowWidth <= 600 && (
+                <div className={styles.phoneLink}>
+                    <Link href="tel:+905073195505">
+                        <Image src={costumer} width={24} height={24} alt="phone" />
+                    </Link>
+                </div>
+            )}
             <button className={styles.hamburger} onClick={toggleMenu}>
                 <Image src={hamburger} width={48} height={48} alt="Menu" />
             </button>

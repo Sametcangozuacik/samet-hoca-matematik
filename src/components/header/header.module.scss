@@ -13,7 +13,6 @@
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-
 .hamburger {
   background: #f8f1e9;
   border: none;
@@ -31,7 +30,6 @@
   display: flex;
   gap: 20px;
   position: relative;
-  /* Ensure the submenu is positioned relative to this element */
 
   @media (max-width: 768px) {
     display: none;
@@ -69,7 +67,6 @@
 
 .subMenuParent {
   position: relative;
-  /* Ensure the submenu is positioned relative to this element */
 }
 
 .subMenu {
@@ -80,19 +77,16 @@
   background-color: transparent;
   position: absolute;
   top: 100%;
-  /* Position it directly below the button */
   left: 0;
   right: auto;
   border: 2px solid #ccc;
   border-radius: 5px;
   z-index: 5;
   display: none;
-  /* Hide by default */
 }
 
 .subMenuOpen {
   display: block;
-  /* Show when active */
 }
 
 .subMenuLink {
@@ -103,5 +97,28 @@
 
   &:hover {
     background-color: #e9ecef;
+  }
+}
+
+.phoneLink {
+  bottom: 20px;
+  right: 20px;
+  background-color: $primary-color;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .phoneLink {
+      display: block;
   }
 }

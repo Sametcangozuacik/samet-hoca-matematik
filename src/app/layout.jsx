@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import Inform from "@/components/ınform/ınform";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
@@ -14,6 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={styles.root}>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/Tittleicon.ico" />
+      </Head>
       <body className={inter.className}>
         <Inform />
         <Header />

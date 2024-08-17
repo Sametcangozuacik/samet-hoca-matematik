@@ -5,4 +5,27 @@
     margin: 0 auto;
     gap: -100px;
     max-width: 1500px;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20;
+        
+    }
+}
+.oursPageSection {
+    display: flex;
+}
+
+.oursPageSection > :first-child {
+    min-width: 200px; // Menü genişliğini ayarlar
+    position: sticky;
+    top: 0; // Sayfa kaydırıldığında menüyü sabitler
+    align-self: flex-start;
+}
+
+.oursPageSection > :nth-child(2) {
+    flex: 1; // İkinci eleman yani AboutUs bileşeninin kalan alanı kaplamasını sağlar
+    padding-left: 20px; // Menü ile içerik arasında boşluk bırakır
 }

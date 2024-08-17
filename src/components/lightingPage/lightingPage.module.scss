@@ -1,0 +1,30 @@
+@use "../../app/_variables.scss" as *;
+
+.lightingPage {
+     margin: 0 auto;
+     max-width: 1200px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+
+     h2{
+            font-size: 2rem;
+            color: $secondary-color;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: $primary-font;
+     }
+
+     p{
+            font-size: 1rem;
+            color: $secondary-color;
+            font-family: $primary-font;
+            text-align: justify;
+            padding: 10px;
+     }
+}
+
+
+
+
+

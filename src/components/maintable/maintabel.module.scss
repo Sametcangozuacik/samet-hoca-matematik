@@ -7,8 +7,8 @@
 
 .abilitiesContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 sütunlu grid oluşturur */
-    gap: 20px; /* Hücreler arasındaki boşluk */
+    grid-template-columns: repeat(3, 1fr); /* 3-column grid */
+    gap: 20px; /* Gap between cells */
 }
 
 .ability {
@@ -17,21 +17,23 @@
     justify-content: center;
     text-align: center;
     font-family: $primary-font;
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    padding: 10px;
-    background-color: #fff; 
+    border: 1px solid $secondary-color;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Background blur effect */
     gap: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efektleri */
-}
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition effects */
 
-.ability:hover {
-    transform: scale(1.05); /* Hafifçe büyütme */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Öne çıkarma gölgesi */
+    &:hover {
+        transform: scale(1.05); /* Slight scale up */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevated shadow */
+        background-color: rgba(255, 255, 255, 0.8); /* More opaque on hover */
+    }
 }
 
 .abilityName {
-    margin-top: 10px; 
+    margin-top: 10px;
     color: $secondary-color;
     font-weight: 500;
 }
@@ -43,16 +45,16 @@
     margin-bottom: 20px;
 }
 
-/* Responsive tasarım */
+/* Responsive design */
 @media (max-width: 1024px) {
     .abilitiesContainer {
-        grid-template-columns: repeat(2, 1fr); /* 2 sütunlu grid */
+        grid-template-columns: repeat(2, 1fr); /* 2-column grid */
     }
 }
 
 @media (max-width: 768px) {
     .abilitiesContainer {
-        grid-template-columns: 1fr; /* Tek sütunlu grid */
+        grid-template-columns: 1fr; /* 1-column grid */
     }
     
     .abilities {
@@ -60,7 +62,7 @@
     }
 
     .ability {
-        flex-direction: column; /* Dikey hizalama */
-        padding: 15px;
+        flex-direction: column; /* Vertical alignment */
+        padding: 20px;
     }
 }

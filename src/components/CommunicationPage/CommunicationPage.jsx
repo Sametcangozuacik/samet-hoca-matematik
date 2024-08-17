@@ -5,6 +5,7 @@ import Image from 'next/image';
 import whatsapp from "../../../public/ınform/wplogicon.svg";
 import gmail from "../../../public/ınform/gmaillogoicon.svg";
 import location from "../../../public/CommunicationPage/location.icon.svg";
+import instagramicon from "../../../public/footer/instagramicon.svg";
 import styles from "./CommunicationPage.module.scss";
 
 export default function CommunicationPage() {
@@ -61,7 +62,7 @@ export default function CommunicationPage() {
 
     return (
         <div className={styles.contactPageSection}>
-            <h1 className={styles.contactPageH1}>Lokasyon Matematik ile tanışmak istermisiniz ?</h1>
+            <h1 className={styles.contactPageH1}>Lokasyon Matematik ile tanışmaya hazır mısınız?</h1>
             <div className={styles.contactSectionPage}>
             <div className={styles.contactPage}>
                 <h2 className={styles.contactPageH2}>Hızlı İletişim Formu Doldurunuz</h2>
@@ -81,6 +82,9 @@ export default function CommunicationPage() {
                         </a>
                         <a className={styles.ınformSectionLink} href="mailto:lokasyonmatematik@gmail.com" target="_blank" rel="noopener noreferrer">
                             <Image src={gmail} width={36} height={36} alt="Gmail" />lokasyonmatematik@gmail.com
+                        </a>
+                        <a className={styles.ınformSectionLink} href="https://www.instagram.com/lokasyonmatematik?igsh=MW10bmFnN25xODVtdw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                            <Image src={instagramicon} width={36} height={36} alt="WhatsApp" />lokasyonmatematik
                         </a>
                         <p className={styles.ınformSectionLink}> <Image src={location} width={36} height={36} alt="Gmail" />Ankara, Türkiye</p>
                     </ul>

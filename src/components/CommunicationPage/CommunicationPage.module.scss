@@ -1,86 +1,90 @@
 @use "../../app/_variables.scss" as *;
 
 .contactPage {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px; // Daha geniş bir maksimum genişlik
+  margin: 0 auto;
+  padding: 2rem; // Padding'i artırdık
+  background-color: #ffffff; // Daha temiz bir arka plan rengi
+  border-radius: 12px; // Daha yuvarlak köşeler
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Hafif ama belirgin bir gölge
 
-    @media (max-width: 768px) {
-        padding: 15px;
-        box-shadow: none;
-    }
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    box-shadow: none; // Mobil cihazlarda gölgeyi kaldırdık
+  }
 }
 
 .contactPageH2 {
-    font-size: 1.8rem; /* Başlık boyutunu azaltalım */
-    color: #333;
-    text-align: center;
-    margin-bottom: 10px;
+  font-size: 2rem; // Başlık boyutunu biraz artırdık
+  color: $primary-color; // Başlık için marka rengini kullandık
+  text-align: center;
+  margin-bottom: 1rem; // Margin'i artırdık
+  font-family: $primary-font;
+  font-weight: bold; // Başlığı daha belirgin hale getirmek için kalın yazı tipi
 
-    @media (max-width: 768px) {
-        font-size: 1.5rem;
-    }
+  @media (max-width: 768px) {
+    font-size: 1.6rem; // Daha küçük ekranlarda daha küçük başlık
+  }
 }
 
 .contactPageH3 {
-    font-size: 1.3rem; /* Alt başlık boyutunu azaltalım */
-    color: #555;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: $primary-font;
+  font-size: 1.4rem; // Alt başlık boyutunu artırdık
+  color: $secondary-color; // Alt başlık için ikincil rengi kullandık
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: $primary-font;
+  font-weight: semi-bold; // Alt başlığı daha belirgin hale getirmek için yarı kalın yazı tipi
 
-    @media (max-width: 768px) {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-    }
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .contactPageP {
-    font-size: 0.9rem; /* Paragraf yazı boyutunu azaltalım */
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-align: justify;
-    font-family: $primary-font;
+  font-size: 1rem; // Paragraf yazı boyutunu artırdık
+  color: #555; // Daha okunabilir bir renk
+  line-height: 1.8; // Daha rahat okuma için satır aralığını artırdık
+  margin-bottom: 2rem; // Daha geniş boşluk
+  text-align: justify;
+  font-family: $primary-font;
 
-    @media (max-width: 768px) {
-        font-size: 0.8rem;
-        margin-bottom: 20px;
-    }
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .contactPageForm {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-family: $primary-font;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // Daha geniş bir boşluk
+  font-family: $primary-font;
 
-    @media (max-width: 768px) {
-        gap: 10px;
-    }
+  @media (max-width: 768px) {
+    gap: 0.75rem;
+  }
 }
 
 .contactPageFormInput {
+  padding: 12px; // Daha geniş iç boşluk
+  font-size: 1rem; // Giriş alanı yazı boyutunu artırdık
+  border: 1px solid #ccc; // Daha açık bir kenar rengi
+  border-radius: 6px; // Daha yuvarlak köşeler
+  background-color: #f8f9fa; // Hafif bir arka plan rengi
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: $primary-font;
+
+  &:focus {
+    border-color: $primary-color; // Markanın rengi
+    box-shadow: 0 0 5px rgba($primary-color, 0.3); // Hafif bir odaklanma gölgesi
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
     padding: 10px;
-    font-size: 0.9rem; /* Giriş alanı yazı boyutunu azaltalım */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    transition: border-color 0.3s ease;
-    font-family: $primary-font;
-
-    &:focus {
-        border-color: #007bff;
-        outline: none;
-    }
-
-    @media (max-width: 768px) {
-        padding: 8px;
-        font-size: 0.8rem;
-    }
+    font-size: 0.9rem;
+  }
 }
 
 .contactPageFormInput.subjectInput {
@@ -173,5 +177,17 @@
 
     @media (max-width: 768px) {
         font-size: 1.6rem;
+    }
+}
+
+.footerBoxList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    font-family: $primary-font;
+
+    @media (max-width: 768px) {
+        gap: 8px;
     }
 }
