@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "../fifthgradePage/fifthgradePage.module.scss";
 
-
-
 export default function FifthGrade() {
     return (
         <main>
@@ -20,6 +18,12 @@ export default function FifthGrade() {
                 <p>Veri Toplama ve Değerlendirme</p>
                 <p>Alan Ölçme</p>
                 <p>Geometrik Cisimler</p>
+            </div>
+            <h2 className={styles.title}>5. Sınıf Matematik Dökümantasyonlar</h2>
+            <div className={styles.container}>
+                <a href="/dowland/beşdoğalsayılar.pdf" download="beşdoğalsayılar.pdf">
+                    Doğal Sayılar Okunuşları ve Basamak Kavramları
+                </a>
             </div>
         </main>
     );
