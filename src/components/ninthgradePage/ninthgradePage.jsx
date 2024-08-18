@@ -1,5 +1,5 @@
-import Reackt from 'react';
-import styles from './ninthgradePage.module.scss';
+
+import styles from './ninthgradepage.module.scss';
 
 
 export default function ninthgradePage() {

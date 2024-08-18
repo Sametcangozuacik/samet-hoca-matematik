@@ -1,5 +1,5 @@
 import React from "react";
-import OursPage from "../../../components/Ours/Ours";
+import OursPage from "../../../components/ours/ours";
 
 
 
