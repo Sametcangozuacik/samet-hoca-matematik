@@ -1,5 +1,5 @@
 import React from "react";
-import TwelfthGradePage from "../../../components/twelfthGradePage/twelfthgradePage";
+import TwelfthGradePage from "../../../components/twelfthgradePage/twelfthgradePage";
 
 export default function TwelfthGrade() {
     return (
