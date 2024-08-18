@@ -12,7 +12,7 @@ export default function CommunicationPage() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
-    const [phone, setPhone] = useState(''); // Yeni telefon durumu
+    const [phone, setPhone] = useState('');
 
     function handleNameChange(event) {
         setName(event.target.value);
@@ -27,12 +27,12 @@ export default function CommunicationPage() {
     }
 
     function handlePhoneChange(event) {
-        setPhone(event.target.value); // Telefon alanı için değişiklik
+        setPhone(event.target.value);
     }
 
     function handleSubmit(event) {
         event.preventDefault();
-        if (name === '' || email === '' || subject === '' || phone === '') { // Telefon kontrolü
+        if (name === '' || email === '' || subject === '' || phone === '') { 
             alert('Lütfen tüm alanları doldurunuz');
             return;
         } else {
@@ -49,8 +49,8 @@ export default function CommunicationPage() {
             name: name,
             email: email,
             subject: subject,
-            phone: phone // Telefon numarasını da gönderdik
-        };
+            phone: phone,
+        };  // Closing brace added here
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
             .then((response) => {
@@ -64,19 +64,19 @@ export default function CommunicationPage() {
         <div className={styles.contactPageSection}>
             <h1 className={styles.contactPageH1}>Lokasyon Matematik ile tanışmaya hazır mısınız?</h1>
             <div className={styles.contactSectionPage}>
-            <div className={styles.contactPage}>
-                <h2 className={styles.contactPageH2}>Hızlı İletişim Formu Doldurunuz</h2>
-                <form className={styles.contactPageForm} onSubmit={handleSubmit}>
-                    <input className={styles.contactPageFormInput} value={name} onChange={handleNameChange} type="text" placeholder="Adınız ve Soyadınız" />
-                    <input className={styles.contactPageFormInput} value={phone} onChange={handlePhoneChange} type="tel" placeholder="Telefon Numaranız" /> {/* Telefon numarası */}
-                    <input className={styles.contactPageFormInput} value={email} onChange={handleEmailChange} type="email" placeholder="E-posta Adresiniz" />
-                    <input className={styles.contactPageFormInput} value={subject} onChange={handleSubjectChange} type="text" placeholder="Danışmak İstediğiniz Konu" />
-                    <button className={styles.contactPageFormInputBtn} type="submit">Gönder</button>
-                </form>
-            </div>
-            <div className={styles.contactPage}>
-                <h2 className={styles.contactPageH2}>İletişim</h2>
-                <ul className={styles.footerBoxList}>
+                <div className={styles.contactPage}>
+                    <h2 className={styles.contactPageH2}>Hızlı İletişim Formu Doldurunuz</h2>
+                    <form className={styles.contactPageForm} onSubmit={handleSubmit}>
+                        <input className={styles.contactPageFormInput} value={name} onChange={handleNameChange} type="text" placeholder="Adınız ve Soyadınız" />
+                        <input className={styles.contactPageFormInput} value={phone} onChange={handlePhoneChange} type="tel" placeholder="Telefon Numaranız" />
+                        <input className={styles.contactPageFormInput} value={email} onChange={handleEmailChange} type="email" placeholder="E-posta Adresiniz" />
+                        <input className={styles.contactPageFormInput} value={subject} onChange={handleSubjectChange} type="text" placeholder="Danışmak İstediğiniz Konu" />
+                        <button className={styles.contactPageFormInputBtn} type="submit">Gönder</button>
+                    </form>
+                </div>
+                <div className={styles.contactPage}>
+                    <h2 className={styles.contactPageH2}>İletişim</h2>
+                    <ul className={styles.footerBoxList}>
                         <a className={styles.ınformSectionLink} href="https://wa.me/5073195505" target="_blank" rel="noopener noreferrer">
                             <Image src={whatsapp} width={36} height={36} alt="WhatsApp" />+90 507 319 5505
                         </a>
@@ -88,9 +88,8 @@ export default function CommunicationPage() {
                         </a>
                         <p className={styles.ınformSectionLink}> <Image src={location} width={36} height={36} alt="Gmail" />Ankara, Türkiye</p>
                     </ul>
-            </div>
+                </div>
             </div>
         </div>
     );
 }
-

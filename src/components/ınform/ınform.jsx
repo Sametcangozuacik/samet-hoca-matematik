@@ -22,7 +22,7 @@ export default function Inform() {
            </a>
         </div>
         <div className={styles.ınformSectionTwo}>
-        <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
+        <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/lokasyonmatematik?igsh=MW10bmFnN25xODVtdw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
               <Image src={instagram} width={16} height={16} alt="Instagram" />
            </a>
            <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
