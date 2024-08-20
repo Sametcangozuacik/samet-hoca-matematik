@@ -1,0 +1,11 @@
+# Lokasyon Matematik robots.txt
+
+# Tüm tarayıcılara genel erişim izni
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /user-data/
+Disallow: /some-sensitive-file.pdf
+
+# Site haritası
+Sitemap: https://www.lokasyonmatematik.com/sitemap.xml
