@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="google-site-verification" content="Fto9EkJwwrCnn1rAn7M_d0mjpdKPb4AZKFkk-2tdPog" />
         <meta name="twitter:image" content={metadata.twitter.image} />
         <link rel="icon" href="/Tittleicon.ico" />
         <link rel="canonical" href={metadata.openGraph.url} />
