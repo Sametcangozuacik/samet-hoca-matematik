@@ -20,7 +20,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lokasyon Matematik | Ankara Özel Ders",
-    description: "Lokasyon Matematik, Ankara'da kişiye özel ve etkili matematik dersleri sunar. Öğrencilerimize bireysel eğitim ve destek sağlar.",
+    description: "Lokasyon Matematik, Ankara'da matematik özel ders hizmeti sunarak öğrencilerin başarılarını artırmayı hedefler. Ankara'da özel ders arayan öğrencilere kişiye özel ve etkili eğitim programları sunuyoruz. Alanında uzman eğitmenlerimiz, her öğrencinin ihtiyaçlarına uygun bireysel eğitim ve tam destek sağlar. Ankara özel ders hizmetlerimizle, sınavlara hazırlık ve okul derslerinde başarıyı yakalamak için Lokasyon Matematik doğru adres.",
     image: "/header/sametmathsicon.svg",  
   },
 };
