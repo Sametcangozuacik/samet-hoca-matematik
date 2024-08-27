@@ -25,6 +25,17 @@
   }
 }
 
+.headerLogo{
+  width: 200px;
+  height: 200px;
+
+  @media screen and (max-width: 768px) {
+    width: 130px;
+    height: 130px;
+    
+  }
+}
+
 .link {
   list-style: none;
   display: flex;

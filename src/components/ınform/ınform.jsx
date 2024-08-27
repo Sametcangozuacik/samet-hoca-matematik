@@ -10,7 +10,6 @@ import youtube from "../../../public/ınform/youtubeicon.svg";
 import twiter from "../../../public/ınform/twiterlogoicon.svg";
 
 export default function Inform() {
-    const time = moment().format('LTS');
   return (
     <div className={styles.ınformSection}>
         <div className={styles.ınformSectionOne}>
@@ -31,7 +30,6 @@ export default function Inform() {
            <a className={styles.ınformSectionLinKTwo} href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
               <Image src={twiter} width={16} height={16} alt="Twiter" />
            </a>
-           <p className={styles.ınformSectionTime}>{time}</p>
         </div>
     </div>
   );

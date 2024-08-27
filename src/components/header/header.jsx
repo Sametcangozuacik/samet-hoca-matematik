@@ -67,7 +67,7 @@ export default function Header() {
 
     return (
         <header className={styles.header} ref={headerRef}>
-            <Image src={logo} width={200} height={200} alt="Site Logo" />
+            <Image className={styles.headerLogo} src={logo} alt="Site Logo" />
             {windowWidth <= 600 && (
                 <div className={styles.phoneLink}>
                     <Link href="tel:+905073195505">
