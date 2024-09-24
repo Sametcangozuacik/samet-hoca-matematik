@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import section from "../../../public/Privatetuition/privatetuition.png";
+import section from "../../../public/Privatetuition/privatetuition.jpeg";
 import whatsapp from "../../../public/Privatetuition/whatsappicon.svg";
 import phone from "../../../public/Privatetuition/phoneicon.svg";
 import styles from "./mainsection.module.scss";
