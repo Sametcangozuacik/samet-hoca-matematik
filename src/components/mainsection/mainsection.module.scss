@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: space-between;
     font-family: $primary-font;
+
     background: linear-gradient(135deg, lighten($primary-color, 20%), $tertiary-color);
 
     @media (max-width: 768px) {
@@ -32,6 +33,19 @@
         max-width: 100%;
     }
 }
+
+.mainSectionTitle {
+    font-size: 1.75rem; /* Büyük başlık boyutu */
+    color: #222; /* Koyu başlık rengi */
+    font-weight: 800; /* Daha kalın yazı */
+    letter-spacing: 1.5px; /* Harfler arası geniş boşluk */
+    text-transform: uppercase; /* Büyük harf */
+    padding: 20px 0; /* Üst ve alt boşluk */
+    margin-bottom: 40px; /* Başlık altı boşluk */
+    position: relative; /* Alt çizgiyi yerleştirmek için gerekli */
+}
+
+
 
 .mainSectionImage {
     max-width: 400px;
