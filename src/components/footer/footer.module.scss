@@ -7,6 +7,7 @@
     padding: 10px 20px;
     position: relative;
     flex-wrap: wrap;
+    border-top: 1px solid $secondary-color; // Üst çizgi eklendi
 }
 
 .col {
@@ -37,7 +38,6 @@
     @media screen and (max-width: 768px) {
         margin-top: 20px;
         align-items: center;
-        
     }
 }
 
@@ -92,8 +92,7 @@
     justify-content: center;
 
     @media screen and (max-width: 768px) {
-          display: none;
-        
+        display: none;
     }
 }
 
@@ -110,7 +109,7 @@
 
 .footerBottom {
     margin-top: 5px;
-    border-top: 1px solid $secondary-color;
+    border-top: 1px solid $secondary-color; // Alt çizgi
     text-align: center;
 }
 
