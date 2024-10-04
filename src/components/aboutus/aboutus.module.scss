@@ -8,7 +8,7 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // Hafif gölgelendirme
   max-width: 1000px; // Daha geniş bir maksimum genişlik
   background-color: #f9f9f9; // Arka plan rengi
-  margin: auto; // Ortaya hizalama
+  margin: 0 auto; // Ortaya hizalama
   transition: box-shadow 0.3s ease, transform 0.3s ease; // Geçiş efektleri
 
   h1 {

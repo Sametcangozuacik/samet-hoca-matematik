@@ -1,0 +1,103 @@
+@use "../../app/_variables.scss" as *;
+
+.demoLesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px; // İçerik için boşluk
+}
+
+.demoLesson__heading {
+    font-size: 2.5rem; // Başlık boyutu
+    margin: 50px 0 20px; // Boşluk
+    color: $secondary-color;
+    font-weight: bold; // Kalın yazı
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); // Metin gölgesi
+}
+
+.demoLesson__content {
+    font-size: 1.5rem; // İçerik yazı boyutu
+    color: $secondary-color;
+    margin-bottom: 30px; // Alt boşluk
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; // İçerik öğeleri arası boşluk
+    line-height: 1.6; // Satır aralığı
+}
+
+.demoLesson__button {
+    background-color: $primary-color; // Buton arka plan rengi
+    color: $tertiary-color; // Buton yazı rengi
+    padding: 1rem 2rem; // Buton iç boşluğu
+    border: none; // Kenarlık yok
+    border-radius: 50px; // Yuvarlak buton
+    font-size: 1.5rem; // Buton yazı boyutu
+    cursor: pointer; // İmleç değişimi
+    transition: all 0.3s ease; // Geçiş efekti
+    margin: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); // Buton gölgesi
+
+    &:hover {
+        background-color: darken($primary-color, 10%); // Hover durumu için daha koyu renk
+        transform: translateY(-2px); // Yukarı hareket efekti
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3); // Hover sırasında gölge artışı
+    }
+}
+
+// Responsive tasarım
+@media (max-width: 1200px) {
+    .demoLesson {
+        padding: 15px; // Orta boy cihazlar için boşluk azaltıldı
+    }
+
+    .demoLesson__heading {
+        font-size: 2.2rem; // Orta boy cihazlar için başlık boyutu
+    }
+
+    .demoLesson__content {
+        font-size: 1.4rem; // İçerik yazı boyutu
+    }
+
+    .demoLesson__button {
+        font-size: 1.4rem; // Buton yazı boyutu
+    }
+}
+
+@media (max-width: 768px) {
+    .demoLesson {
+        padding: 10px; // Küçük boy cihazlar için boşluk
+    }
+
+    .demoLesson__heading {
+        font-size: 2rem; // Küçük cihazlar için başlık boyutu
+    }
+
+    .demoLesson__content {
+        font-size: 1.2rem; // İçerik yazı boyutu
+        gap: 15px; // İçerik öğeleri arası boşluk
+    }
+
+    .demoLesson__button {
+        padding: 0.8rem 1.5rem; // Küçük boy cihazlar için buton iç boşluğu
+        font-size: 1.2rem; // Buton yazı boyutu
+    }
+}
+
+@media (max-width: 480px) {
+    .demoLesson__heading {
+        font-size: 1.8rem; // Çok küçük cihazlar için başlık boyutu
+    }
+
+    .demoLesson__content {
+        font-size: 1rem; // İçerik yazı boyutu
+    }
+
+    .demoLesson__button {
+        padding: 0.5rem 1rem; // Çok küçük boy cihazlar için buton iç boşluğu
+        font-size: 1rem; // Buton yazı boyutu
+    }
+}
