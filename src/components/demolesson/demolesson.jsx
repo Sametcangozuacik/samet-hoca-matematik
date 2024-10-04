@@ -22,7 +22,7 @@ export default function DemoLesson() {
                 <button className={styles.demoLesson__button}>10. Sınıf Sayma Testini İndir (PDF)</button>
             </a>
             <a className={styles.demoLesson__link} href="/demolesson/Tyt%20Hareket%20Problemleri.pdf" download="Tyt_Hareket_Problemleri.pdf">
-                <button className={styles.demoLesson__button}>TYT Hareket Problemleri Testini İndir (PDF)</button>
+                <button className={styles.demoLesson__button}>(TYT) Hareket Problemleri Testini İndir (PDF)</button>
             </a>
             </div>        
             </div>
