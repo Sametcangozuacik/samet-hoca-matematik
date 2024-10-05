@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import Inform from "@/components/ınform/ınform";
+import Inform from "@/components/inform/inform";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import styles from "./globals.module.scss";
@@ -55,9 +55,9 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="google-site-verification" content="Fto9EkJwwrCnn1rAn7M_d0mjpdKPb4AZKFkk-2tdPog" />
         <meta name="twitter:image" content={metadata.twitter.image} />
-        <link rel="icon" href="/Tittleicon.ico" />
+        <meta name="google-site-verification" content="Fto9EkJwwrCnn1rAn7M_d0mjpdKPb4AZKFkk-2tdPog" />
+        <link rel="icon" href="/Titleicon.ico" />
         <link rel="canonical" href={metadata.openGraph.url} />
         <script type="application/ld+json">
           {JSON.stringify(metadata.schema)}
