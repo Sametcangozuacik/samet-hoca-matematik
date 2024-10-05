@@ -1,0 +1,55 @@
+.fixedIcons {
+    position: fixed;
+    bottom: 15px; /* Sayfanın altına sabitlemek için */
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    gap: 15px; /* İkonlar arasında boşluk */
+    padding: 10px;
+    background-color: transparent; /* Arka planı kaldırdık */
+}
+
+.icon {
+    width: 60px; /* İkon boyutunu ayarladık */
+    height: 60px;
+    border-radius: 50%; /* Düz değil hafif yuvarlak kenar */
+    background-color: #f5f5f5; /* Düz renkli bir arka plan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Daha yumuşak bir gölge */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer; /* Tıklanabilir olduğunu belirtiyoruz */
+    padding: 8px; /* İçerik için biraz boşluk ekliyoruz */
+}
+
+.icon img {
+    width: 70%; /* Resim boyutunu ayarladık */
+    height: 70%;
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Hover'da biraz büyütme */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Hover'da gölgeyi belirginleştiriyoruz */
+    background-color: #e0e0e0; /* Hover'da arka planı hafifçe değiştiriyoruz */
+    border: 2px solid #007BFF; /* Hover durumunda kenar rengi ekledik */
+}
+
+@media (max-width: 768px) {
+    .fixedIcons {
+        right: 10px;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .icon img {
+        width: 60%;
+        height: 60%;
+    }
+}

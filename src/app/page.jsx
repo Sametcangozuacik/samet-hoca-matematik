@@ -4,6 +4,7 @@ import MainSection from "@/components/mainsection/mainsection";
 import MainTable from "@/components/maintable/maintable";
 import FrequentlyAsked from "@/components/frequentlyAsked/frequentlyasked";
 import DemoLesson from "@/components/demolesson/demolesson";
+import FixedIcons from "@/components/FixedIcons/FixedIcons";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <MainTable />
         <DemoLesson />
         <FrequentlyAsked />
+        <FixedIcons />
       </main>
     </>
   );
