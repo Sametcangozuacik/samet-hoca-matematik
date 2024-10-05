@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import section from "../../../public/Privatetuition/privatetuition.jpeg";
-import whatsapp from "../../../public/Privatetuition/whatsappicon.svg";
-import phone from "../../../public/Privatetuition/phoneicon.svg";
 import styles from "./mainsection.module.scss";
 
 export default function MainSection() {
@@ -10,7 +8,7 @@ export default function MainSection() {
         <main className={styles.mainSection}>
             <div className={styles.mainSectionContainer}>
                 <h2 className={styles.mainSectionTitle}>
-                    Ankara&apos;nın Uzman Eğitmenlerinden Online veya Yüz Yüze Ders Fırsatları
+                   Online veya Yüz Yüze: Ankara&apos;nın Alanında Uzman Eğitmenleri ile Başarıya Ulaşın!
                 </h2>
                 <p className={styles.mainSectionDescription}>
                     Ankara&apos;da başarının kapılarını aralamaya hazır mısınız? Lokasyon Matematik olarak, Gazi Üniversitesi&apos;nin yetiştirdiği alanında uzman eğitmenlerimizle hayallerinize bir adım daha yaklaşıyoruz. Her öğrencinin bireysel ihtiyaçlarını ön planda tutarak, sizi başarıya ulaştıracak ders programları oluşturuyoruz. Sadece bir eğitim kurumu değil, aynı zamanda geleceğinize rehberlik eden bir yol arkadaşıyız.
@@ -23,34 +21,6 @@ export default function MainSection() {
 
                     Gazi Üniversitesi&apos;nin köklü eğitim anlayışını ve profesyonel yaklaşımını deneyimleyerek, hedeflerinize ulaşmanız için gereken tüm desteği sağlayacağız. Eğitimdeki bu önemli adımda yanınızda olmak için buradayız. Hedeflerinize giden yolda, sizi desteklemek ve potansiyelinizi en üst seviyeye çıkarmanız için Lokasyon Matematik olarak her zaman yanınızdayız.
                 </p>
-                <div className={styles.mainSectionBoxButton}>
-                    <a
-                        href="https://wa.me/905324000000"
-                        className={styles.mainSectionButton}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="WhatsApp ile iletişime geç"
-                    >
-                        <Image
-                            src={whatsapp}
-                            width={100}
-                            height={30}
-                            alt="WhatsApp ile iletişime geç"
-                        />
-                    </a>
-                    <a
-                        href="tel:+905073195505"
-                        className={styles.mainSectionButton}
-                        aria-label="Telefon ile iletişime geç"
-                    >
-                        <Image
-                            src={phone}
-                            width={100}
-                            height={30}
-                            alt="Telefon ile iletişime geç"
-                        />
-                    </a>
-                </div>
             </div>
             <Image
                 className={styles.mainSectionImage}

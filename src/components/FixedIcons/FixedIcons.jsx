@@ -7,7 +7,7 @@ import styles from './FixedIcons.module.scss';
 const FixedIcons = () => {
   return (
     <div className={styles.fixedIcons}>
-      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+      <a href="tel:+905073195505" target="_blank" rel="noopener noreferrer">
         <Image 
           src={Phone}
           alt="Arama" 
