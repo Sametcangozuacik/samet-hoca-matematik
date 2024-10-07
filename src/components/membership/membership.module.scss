@@ -1,0 +1,83 @@
+@use "../../app/_variables.scss" as *;
+
+.memberShipSection {
+    padding: 40px;
+    font-family: $primary-font;
+    border-radius: 8px; // Kenarları yuvarlat
+    margin: 20px auto; // Üst ve alt boşluk
+    width: 80%;
+    max-width: 1200px; // Maksimum genişlik
+
+    // Responsive tasarım için medya sorguları
+    @media (max-width: 768px) {
+        padding: 20px; // Küçük ekranlarda iç boşluğu azalt
+        width: 90%; // Ekranın daha geniş kısmını kullan
+    }
+}
+
+.memberShipSectionHeading {
+    font-size: 2.5rem; // Başlık boyutu
+    color: #333; // Başlık rengi
+    text-align: center; // Ortalar
+    font-weight: 700; // Kalın yazı stili
+    margin-bottom: 30px; // Başlıktan sonra boşluk bırakır
+
+    // Responsive tasarım için medya sorguları
+    @media (max-width: 768px) {
+        font-size: 2rem; // Küçük ekranlarda başlık boyutunu küçült
+        margin-bottom: 20px; // Alt boşluğu azalt
+    }
+}
+
+.memberShipSectionContent {
+    display: flex; // Flexbox ile yan yana hizalama
+    align-items: center; // Dikey ortalama
+    justify-content: space-between; // İçeriklerin arasını aç
+    margin-top: 20px; // Üstten boşluk
+
+    // Responsive tasarım için medya sorguları
+    @media (max-width: 768px) {
+        flex-direction: column; // Küçük ekranlarda dikey hizalama
+        align-items: center; // İçerikleri ortala
+    }
+}
+
+.memberShipSectionContentText {
+    max-width: 600px; // Metin içeriği için maksimum genişlik
+    margin-left: 20px; // Resim ile metin arasına boşluk ekler
+
+    // Responsive tasarım için medya sorguları
+    @media (max-width: 768px) {
+        margin-left: 0; // Küçük ekranlarda soldan boşluğu kaldır
+        text-align: center; // Metni ortala
+        margin-top: 20px; // Üstte boşluk ekle
+    }
+}
+
+.stepTitle {
+    font-size: 1.5rem; // Başlık boyutu
+    font-weight: 600; // Orta kalınlık
+    margin-bottom: 10px; // Altında boşluk
+    color: #0070f3; // Mavi renk
+
+    // Responsive tasarım için medya sorguları
+    @media (max-width: 768px) {
+        font-size: 1.25rem; // Küçük ekranlarda başlık boyutunu küçült
+    }
+}
+
+// Yerel bir sınıf ile paragraf stili
+.memberShipParagraph {
+    font-size: 1rem; // Metin boyutu
+    line-height: 1.6; // Satır aralığı
+    color: #555; // Metin rengi
+    margin-top: 10px; // Üstte boşluk
+    text-align: justify; // Metni iki yana yasla
+    font-weight: 600;
+
+    // Responsive tasarım için medya sorguları
+    @media (max-width: 768px) {
+        font-size: 0.9rem; // Küçük ekranlarda metin boyutunu küçült
+        text-align: center; // Metni ortala
+    }
+}

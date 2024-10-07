@@ -5,6 +5,7 @@ import MainTable from "@/components/maintable/maintable";
 import FrequentlyAsked from "@/components/frequentlyAsked/frequentlyasked";
 import DemoLesson from "@/components/demolesson/demolesson";
 import FixedIcons from "@/components/FixedIcons/FixedIcons";
+import Membership from "@/components/membership/membership";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <MainSection />
+        <Membership />
         <MainTable />
         <DemoLesson />
         <FrequentlyAsked />
