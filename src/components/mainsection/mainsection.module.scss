@@ -25,29 +25,77 @@
     line-height: 1.7;
     text-align: justify;
     margin-right: 20px;
+    font-size: 1.1rem;
 
     @media (max-width: 768px) {
         margin-right: 0;
         max-width: 100%;
+        padding: 30px;
     }
 }
 
 .mainSectionTitle {
-    font-size: 2.2rem; /* Büyük başlık boyutu */
-    color: #222; /* Koyu başlık rengi */
-    font-weight: 800; /* Daha kalın yazı */
-    letter-spacing: 1.5px; /* Harfler arası geniş boşluk */
+    font-size: 2.5rem; /* Büyük başlık boyutu */
+    color: $secondary-color; /* Koyu başlık rengi */
+    font-weight: 800; /* Kalın yazı */
+    letter-spacing: 2px; /* Harfler arası geniş boşluk */
     text-transform: uppercase; /* Büyük harf */
     padding: 20px 0; /* Üst ve alt boşluk */
     position: relative; /* Alt çizgiyi yerleştirmek için gerekli */
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 90%; /* Genişlik ayarı */
+    margin: 0 auto; /* Ortalanmış */
+    text-align: center; /* Ortalanmış başlık */
+    overflow: hidden; /* Taşan içerik gizlenecek */
+    
+    /* Gradient animasyon efekti */
+    background: linear-gradient(90deg, $secondary-color, lighten($secondary-color, 10%), $secondary-color);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 3s ease-in-out infinite;
+
+    /* Alt çizgi */
+    &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: $secondary-color;
+        margin: 15px auto 0;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+        width: 100px; /* Hover sırasında genişleyen çizgi */
+    }
+
+    /* Küçük ekranlar için responsive tasarım */
+    @media (max-width: 1024px) {
+        font-size: 2rem;
+    }
 
     @media (max-width: 768px) {
         font-size: 1.8rem;
-     }
+        letter-spacing: 1.5px;
+    }
 
+    @media (max-width: 480px) {
+        font-size: 1.6rem;
+        letter-spacing: 1.2px;
+    }
 }
+
+/* Gradient animasyonu */
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+
 
 
 
@@ -97,12 +145,36 @@
  
 .mainSectionContainer {
     display: flex;
+    flex-direction: row;
     gap: 50px;
     align-items: center;
     justify-content: space-between;
+    padding: 50px;
+    max-width: 1500px;
+    margin: 0 auto; /* Merkezi hizalama */
+    border: 3px solid $primary-color;
+    border-radius: 15%;
+    background-color: $tertiary-color;
+
+    /* İçerik hizalama ve görünüm düzenleme */
+    & > * {
+        flex: 1;
+        min-width: 0; /* İçerik taşmasının önlenmesi */
+    }
+
+    @media (max-width: 1024px) {
+        gap: 40px;
+        padding: 15px;
+    }
 
     @media (max-width: 768px) {
-        flex-direction: column;
+        flex-direction: column; /* Mobilde dikey hizalama */
         gap: 30px;
+        padding: 10px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 20px; /* Daha dar ekranlar için boşluk azaltma */
+        padding: 5px;
     }
 }

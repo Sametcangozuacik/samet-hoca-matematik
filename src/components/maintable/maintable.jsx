@@ -40,13 +40,14 @@ export default function MainTable() {
             <div className={styles.abilitiesContainer}>
                 {abilities.map((ability, index) => (
                     <div key={index} className={styles.ability}>
-                        <Image
-                            src={ability.image}
-                            alt={`Logo for ${ability.name}`}
-                            width={40} 
-                            height={40}
-                            layout="intrinsic"
-                        />
+                        <div style={{ position: 'relative', width: '40px', height: '40px' }}>
+                            <Image
+                                src={ability.image}
+                                alt={`Logo for ${ability.name}`}
+                                fill // Resmi kapsayacak şekilde doldur
+                                style={{ objectFit: 'contain' }} // Resmin içeriği, nesnenin boyutunu aşmaz
+                            />
+                        </div>
                         <p className={styles.abilityName}>{ability.name}</p>
                     </div>
                 ))}

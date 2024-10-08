@@ -33,6 +33,7 @@
     align-items: center; // Dikey ortalama
     justify-content: space-between; // İçeriklerin arasını aç
     margin-top: 20px; // Üstten boşluk
+    gap: 20px; // İçerikler arasındaki boşluk
 
     // Responsive tasarım için medya sorguları
     @media (max-width: 768px) {
