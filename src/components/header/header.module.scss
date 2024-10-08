@@ -85,6 +85,7 @@
   font-family: $primary-font;
   font-weight: 600;
   text-decoration: none;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -93,6 +94,10 @@
   &:hover {
     color: darken($primary-color, 10%);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 }
 
