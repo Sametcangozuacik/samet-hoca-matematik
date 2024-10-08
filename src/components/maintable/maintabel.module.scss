@@ -7,8 +7,10 @@
 
 .abilitiesContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3-column grid */
+    grid-template-columns: repeat(2, 1fr); /* 3-column grid */
     gap: 20px; /* Gap between cells */
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .ability {

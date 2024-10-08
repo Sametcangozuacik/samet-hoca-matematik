@@ -1,36 +1,34 @@
 import React from "react";
 import Image from "next/image";
-import section from "../../../public/Privatetuition/privatetuition.jpeg";
+import section from "../../../public/Privatetuition/privatetuition.png";
 import styles from "./mainsection.module.scss";
 
 export default function MainSection() {
     return (
         <main className={styles.mainSection}>
+            <h2 className={styles.mainSectionTitle}>
+             "Matematikte Başarıya Giden Yol: Online veya Yüz Yüze Eğitim Seçenekleriyle Hedeflerinize Ulaşın!"
+            </h2>
             <div className={styles.mainSectionContainer}>
-                <h2 className={styles.mainSectionTitle}>
-                    Online veya Yüz Yüze: Ankara&apos;nın Alanında Uzman Eğitmenleri ile Başarıya Ulaşın!
-                </h2>
                 <p className={styles.mainSectionDescription}>
-                    Ankara’da başarının kapılarını aralamaya hazır mısınız? Lokasyon Matematik olarak, Gazi Üniversitesi’nin yetiştirdiği alanında uzman eğitmenlerimizle hayallerinize bir adım daha yaklaşıyoruz. Her öğrencinin bireysel ihtiyaçlarını ön planda tutarak, sizi başarıya ulaştıracak özel ders programları oluşturuyoruz. Sadece bir eğitim kurumu değil, aynı zamanda geleceğinize rehberlik eden bir yol arkadaşıyız.
+                    Matematikte başarının kapılarını aralamaya hazır mısınız? Lokasyon Matematik olarak, Gazi Üniversitesi’nin yetiştirdiği uzman eğitmenlerimizle matematik alanındaki hedeflerinize bir adım daha yaklaşmanızı sağlıyoruz. Her öğrencinin bireysel ihtiyaçlarına özel olarak hazırlanan matematik ders programlarıyla, başarıya giden yolda yanınızdayız.
 
-                    Eğitimde mükemmeliyet hedefiyle yola çıkan Lokasyon Matematik, sizlere özel olarak hazırlanan ders programlarımızla eksiklerinizi tamamlamanıza ve potansiyelinizi zirveye taşımanıza yardımcı olur. Gazi Üniversitesi’nin bilgi ve birikimiyle desteklenen eğitmenlerimiz, her öğrencinin bireysel ihtiyaçlarını göz önünde bulundurarak etkili ve kapsamlı bir öğrenme süreci sunar. Bu sayede sadece sınavlarda değil, aynı zamanda akademik hayatınızda da kendinize güvenle ilerlemenizi sağlıyoruz.
+                    Matematik, sağlam bir temelle birlikte disiplin ve düzenli çalışma gerektirir. Biz, her seviyedeki öğrencinin matematik becerilerini geliştirmeyi ve eksiklerini tamamlamayı hedefliyoruz. İster temel matematik konularında desteğe ihtiyaç duyuyor olun, ister ileri düzeyde sınavlara hazırlanın, Lokasyon Matematik size en uygun öğrenme ortamını sunar.
 
-                    Her seviyedeki öğrencinin ihtiyacını karşılayacak şekilde tasarlanan ders içeriklerimiz, en güncel eğitim metodolojilerini kullanarak hazırlanmıştır. İster sınavlara hazırlanan bir öğrenci olun, ister akademik kariyerinizde bir adım öne çıkmak isteyin, Lokasyon Matematik’te sizin için en uygun öğrenme deneyimini bulacaksınız.
+                    Matematikte başarı, sadece formülleri bilmekle sınırlı değildir; aynı zamanda bu bilgiyi doğru şekilde uygulayabilmeyi gerektirir. Gazi Üniversitesi’nin deneyimli eğitmen kadrosu, bu uygulama becerisini kazandırarak öğrencilerimizin matematikte kendilerine güvenle ilerlemelerini sağlıyor. Güncel eğitim metodolojileriyle hazırlanan ders içeriklerimiz, her seviyedeki öğrenciye hitap eder ve matematiksel düşünme becerilerinizi en üst düzeye çıkarır.
 
-                    Hedeflerinizi bizimle keşfedin ve sınavlarda, akademik hayatta kendinize güvenle ilerleyin. Size özel ders planlarıyla başarıya giden yolda en iyi eğitimi, doğru zamanda ve doğru yerden almak için Lokasyon Matematik’te buluşalım. Eğitimde sadece bilgi aktarmakla kalmıyor, aynı zamanda motivasyonunuzu ve özgüveninizi artırıyoruz. Bu süreçte, her adımda yanınızda olarak, sizi hayallerinize bir adım daha yaklaştırmayı hedefliyoruz.
+                    Lokasyon Matematik’te, kişiye özel matematik ders planları ile eksiklerinizi tamamlıyor, zayıf yönlerinizi güçlendiriyoruz. Bu sayede matematik sınavlarınızda ve akademik yaşamınızda fark yaratmanızı sağlıyoruz. Matematikte sağlam bir temel atmak, gelecekteki başarılarınız için kritik bir adımdır.
 
-                    Gazi Üniversitesi’nin köklü eğitim anlayışını ve profesyonel yaklaşımını deneyimleyerek, hedeflerinize ulaşmanız için gereken tüm desteği sağlayacağız. Eğitimdeki bu önemli adımda yanınızda olmak için buradayız. Hedeflerinize giden yolda, sizi desteklemek ve potansiyelinizi en üst seviyeye çıkarmanız için Lokasyon Matematik olarak her zaman yanınızdayız.
-
-                    Unutmayın, başarılı bir gelecek için atılacak en önemli adım, doğru eğitimle başlar. Gelin, birlikte bu yolculuğa çıkalım!
+                    Başarılı bir matematik kariyeri için en doğru eğitimle yola çıkın. Lokasyon Matematik, sizi matematikte zirveye taşıyacak en doğru adres!
                 </p>
+                <Image
+                    className={styles.mainSectionImage}
+                    src={section}
+                    alt="Ankara'nın Uzman Eğitmenlerinden Online veya Yüz Yüze Ders Fırsatları"
+                    width={1200}
+                    height={600}
+                />
             </div>
-            <Image
-                className={styles.mainSectionImage}
-                src={section}
-                alt="Ankara'nın Uzman Eğitmenlerinden Online veya Yüz Yüze Ders Fırsatları"
-                width={1200}
-                height={600}
-            />
         </main>
     );
 }
