@@ -43,6 +43,10 @@
     max-width: 80%;
     margin: 0 auto;
 
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+     }
+
 }
 
 
