@@ -7,8 +7,9 @@ export default function MainSection() {
     return (
         <main className={styles.mainSection}>
             <h2 className={styles.mainSectionTitle}>
-             "Matematikte Başarıya Giden Yol: Online veya Yüz Yüze Eğitim Seçenekleriyle Hedeflerinize Ulaşın!"
+                &quot;Matematikte Başarıya Giden Yol: Online veya Yüz Yüze Eğitim Seçenekleriyle Hedeflerinize Ulaşın!&quot;
             </h2>
+
             <div className={styles.mainSectionContainer}>
                 <p className={styles.mainSectionDescription}>
                     Matematikte başarının kapılarını aralamaya hazır mısınız? Lokasyon Matematik olarak, Gazi Üniversitesi’nin yetiştirdiği uzman eğitmenlerimizle matematik alanındaki hedeflerinize bir adım daha yaklaşmanızı sağlıyoruz. Her öğrencinin bireysel ihtiyaçlarına özel olarak hazırlanan matematik ders programlarıyla, başarıya giden yolda yanınızdayız.
