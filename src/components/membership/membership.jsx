@@ -31,7 +31,7 @@ export default function Membership() {
                 <div className={styles.memberShipSectionContentText}>
                     <h6 className={styles.stepTitle}>2. Adım</h6>
                     <p className={styles.memberShipParagraph}>
-                        Öğretmenlerin tecrübeleri, uzmanlık alanları, ders verdiği yerler, tanıtım videoları, üniversite bilgileri ve saatlik ders ücretleri gibi bilgilere sayfamız üzerinden ulaşabilirsiniz. Birçok kritere göre karşılaştırma yaparak aradığınız matematik öğretmenini kolayca keşfedebilirsiniz! İhtiyaçlarınıza en uygun olduğunu düşündüğünüz matematik öğretmenine ders talebinizi iletin; öğretmeniniz size dönüş sağlasın, şartları konuşun ve derslere başlayın. Unutmayın, Özel Ders Alanı'nda her bütçeye uygun matematik öğretmeni bulunmaktadır. Saatlik fiyat aralığı 750 TL - 1.500 TL arasında değişmektedir.
+                        Öğretmenlerin tecrübeleri, uzmanlık alanları, ders verdiği yerler, tanıtım videoları, üniversite bilgileri ve saatlik ders ücretleri gibi bilgilere sayfamız üzerinden ulaşabilirsiniz. Birçok kritere göre karşılaştırma yaparak aradığınız matematik öğretmenini kolayca keşfedebilirsiniz! İhtiyaçlarınıza en uygun olduğunu düşündüğünüz matematik öğretmenine ders talebinizi iletin; öğretmeniniz size dönüş sağlasın, şartları konuşun ve derslere başlayın. Unutmayın, Özel Ders Alanı&apos;nda her bütçeye uygun matematik öğretmeni bulunmaktadır. Saatlik fiyat aralığı 750 TL - 1.500 TL arasında değişmektedir.
                     </p>
                 </div>
                 <Image
@@ -53,7 +53,7 @@ export default function Membership() {
                 <div className={styles.memberShipSectionContentText}>
                     <h6 className={styles.stepTitle}>3. Adım</h6>
                     <p className={styles.memberShipParagraph}>
-                        Genel bir araştırma yapmak ve alternatif oluşturmak istiyorsanız, sizin için hazırladığımız kullanım kolaylığına sahip panelimizden tüm işlemlerinizi yönetebilirsiniz. "Genel Ders Talebi" oluşturma bölümünden sistemin sizi yönlendirdiği şekilde isteklerinizi net bir şekilde ifade ederek genel bir talep oluşturabilirsiniz. Talebinize en uygun matematik öğretmenleri ⚡ gün içerisinde sizinle iletişime geçecektir.
+                        Genel bir araştırma yapmak ve alternatif oluşturmak istiyorsanız, sizin için hazırladığımız kullanım kolaylığına sahip panelimizden tüm işlemlerinizi yönetebilirsiniz. &quot;Genel Ders Talebi&quot; oluşturma bölümünden sistemin sizi yönlendirdiği şekilde isteklerinizi net bir şekilde ifade ederek genel bir talep oluşturabilirsiniz. Talebinize en uygun matematik öğretmenleri ⚡ gün içerisinde sizinle iletişime geçecektir.
 
                         Ayrıca, öğretmenlerle doğrudan iletişim kurmak için arama ve WhatsApp arama özelliklerimizi kullanabilirsiniz. Arama özelliği sayesinde öğretmenlerin profillerine hızlıca erişebilir, ihtiyaçlarınıza uygun öğretmenlerle anında iletişime geçebilirsiniz. WhatsApp araması ile öğretmenlerle güvenli bir ortamda, hızlı bir şekilde görüşme sağlayarak ders detaylarını konuşabilir, alternatif oluşturabilir ve aradığınız matematik öğretmenini kolayca bulabilirsiniz.
                     </p>
@@ -62,4 +62,3 @@ export default function Membership() {
         </div>
     );
 }
-
