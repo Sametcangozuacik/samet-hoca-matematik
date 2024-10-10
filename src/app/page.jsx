@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "./page.module.scss";
 import MainSection from "@/components/mainsection/mainsection";
 import MainTable from "@/components/maintable/maintable";
-import FrequentlyAsked from "@/components/frequentlyAsked/frequentlyasked";
 import DemoLesson from "@/components/demolesson/demolesson";
 import FixedIcons from "@/components/FixedIcons/FixedIcons";
 import Membership from "@/components/membership/membership";
@@ -21,7 +20,6 @@ export default function Home() {
         <Membership />
         <MainTable />
         <DemoLesson />
-        <FrequentlyAsked />
         <FixedIcons />
       </main>
     </>

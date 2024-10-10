@@ -8,6 +8,7 @@ export default function Ours() {
             <div className={styles.oursContent}>
                 <ul className={styles.oursContentLinkBox}>
                     <li><Link className={styles.oursContentLink} href="/ours">Hakkımızda</Link></li>
+                    <li><Link className={styles.oursContentLink} href="/ours">Sıkça Sorulan Sorular</Link></li>
                 </ul>
             </div>
         </div>
