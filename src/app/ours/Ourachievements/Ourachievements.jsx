@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ourachievements.module.scss";
+import styles from "./Ourachievements.module.scss";
 
 export default function OurAchievements() {
     return (
