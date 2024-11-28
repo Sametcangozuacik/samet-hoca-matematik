@@ -1,8 +1,8 @@
 "use client"; // Bu satır client tarafında çalışmasını sağlar
 
 import React, { useState } from "react";
-import OursPage from "../../components/ours/ours";
 import AboutUs from "@/components/aboutus/aboutus";
+import Ourachievements from "../ours/Ourachievements/Ourachievements";
 import FrequentlyAsked from "../ours/frequentlyAsked/frequentlyasked";
 import styles from "./ourspage.module.scss";
 
@@ -31,6 +31,14 @@ export default function Ours() {
                                 Sıkça Sorulan Sorular
                             </button>
                         </li>
+                        <li>
+                            <button 
+                                className={styles.oursContentLink} 
+                                onClick={() => setActiveComponent('achievements')}
+                            >
+                                Başarılarımız 
+                            </button>
+                        </li>
                     </ul>
                 </div>
 
@@ -38,6 +46,7 @@ export default function Ours() {
                     {/* Seçilen komponenti göster */}
                     {activeComponent === 'about' && <AboutUs />}
                     {activeComponent === 'faq' && <FrequentlyAsked />}
+                    {activeComponent === 'achievements' && <Ourachievements/>}
                 </div>
             </div>
         </main>
