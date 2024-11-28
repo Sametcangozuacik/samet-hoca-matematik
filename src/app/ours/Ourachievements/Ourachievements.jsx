@@ -29,7 +29,7 @@ export default function OurAchievements() {
                 </p>
                 <ul className={styles.studentList}>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Ahmet Yılmaz:</strong> LGS'de Türkiye genelinde ilk 1.000'e girdi.
+                        <strong className={styles.studentName}>Ahmet Yılmaz:</strong> LGS&apos;de Türkiye genelinde ilk 1.000&apos;e girdi.
                     </li>
                     <li className={styles.studentItem}>
                         <strong className={styles.studentName}>Selin Kara:</strong> Matematik yarışmasında il birincisi oldu.
@@ -38,7 +38,7 @@ export default function OurAchievements() {
                         <strong className={styles.studentName}>Zeynep Arslan:</strong> Uluslararası matematik sınavında 2. oldu.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Murat Demir:</strong> ALES'le yüksek başarı puanı aldı.
+                        <strong className={styles.studentName}>Murat Demir:</strong> ALES&apos;te yüksek başarı puanı aldı.
                     </li>
                 </ul>
             </div>
@@ -55,10 +55,10 @@ export default function OurAchievements() {
                         <strong className={styles.studentName}>Ece Demir:</strong> Uluslararası matematik olimpiyatlarında bronz madalya kazandı.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Kaan Yalçın:</strong> KPSS'de Türkiye genelinde ilk 1000'a girdi.
+                        <strong className={styles.studentName}>Kaan Yalçın:</strong> KPSS&apos;de Türkiye genelinde ilk 1000&apos;a girdi.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Leyla Şimşek:</strong> Üniversite sınavında ilk 2000'de yer aldı.
+                        <strong className={styles.studentName}>Leyla Şimşek:</strong> Üniversite sınavında ilk 2000&apos;de yer aldı.
                     </li>
                 </ul>
             </div>
@@ -69,7 +69,7 @@ export default function OurAchievements() {
                 </p>
                 <ul className={styles.studentList}>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Burak Can:</strong> Liseye Geçiş Sınavı'nda il genelinde derece yaptı.
+                        <strong className={styles.studentName}>Burak Can:</strong> Liseye Geçiş Sınavı&apos;nda il genelinde derece yaptı.
                     </li>
                     <li className={styles.studentItem}>
                         <strong className={styles.studentName}>Zeynep Çelik:</strong> Matematik alanında hazırladığı proje ile TÜBİTAK ödülü aldı.
@@ -78,7 +78,7 @@ export default function OurAchievements() {
                         <strong className={styles.studentName}>Elif Demirtaş:</strong> Uluslararası matematik olimpiyatlarında 10. oldu.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Baran Doğan:</strong> KPSS'de tüm soruları doğru yanıtladı.
+                        <strong className={styles.studentName}>Baran Doğan:</strong> KPSS&apos;de tüm soruları doğru yanıtladı.
                     </li>
                 </ul>
             </div>
@@ -92,13 +92,13 @@ export default function OurAchievements() {
                         <strong className={styles.studentName}>Ayşe Kaya:</strong> Ulusal matematik yarışmasında altın madalya kazandı.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Emre Şahin:</strong> YKS'de Matematik alanında Türkiye 3500.'sü oldu.
+                        <strong className={styles.studentName}>Emre Şahin:</strong> YKS&apos;de Matematik alanında Türkiye 3500.&apos;sü oldu.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Mina Yıldız:</strong> ALES'te başarı puanıyla dikkat çekti.
+                        <strong className={styles.studentName}>Mina Yıldız:</strong> ALES&apos;te başarı puanıyla dikkat çekti.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Sefa Tan:</strong> KPSS'de matematik alanında en yüksek notu aldı.
+                        <strong className={styles.studentName}>Sefa Tan:</strong> KPSS&apos;de matematik alanında en yüksek notu aldı.
                     </li>
                 </ul>
             </div>
