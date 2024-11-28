@@ -2,25 +2,8 @@
 $primary-color: #3583f0;
 $secondary-color: #1D2026;
 $tertiary-color: #f8f9fa;
-$background-color: #f8f1e9;
-$font-family: "Kanit", sans-serif;
 $shadow-small: 0 2px 5px rgba(0, 0, 0, 0.1);
 $shadow-large: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-// Global Reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $font-family;
-  background-color: $background-color;
-  color: $secondary-color;
-  line-height: 1.6;
-  padding: 1rem;
-}
 
 // Section Styling
 .achievementsSection {
