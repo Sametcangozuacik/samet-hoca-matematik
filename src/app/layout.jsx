@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 const defaultMetadata = {
   title: "Lokasyon Matematik | Ankara Özel Ders ile Başarıyı Yakalayın",
   description: "Ankara'da birebir matematik dersleri ile sınav başarılarını artırın. Lokasyon Matematik ile uzman öğretmenlerden kişisel matematik dersleri alın.",
+  keywords: "ankara matematik özel ders, çankaya matematik özel ders, keçiören matematik özel ders, batıkent matematik birebir ders, etimesgut matematik kursu, mamak özel matematik öğretmeni, kpss matematik özel ders, ales matematik birebir ders, yks matematik dersleri, tyt matematik kursu, lgs matematik özel ders, dgs matematik birebir ders, üniversite hazırlık matematik kursu, ilkokul matematik özel ders, ortaokul matematik birebir ders, lise matematik kursu, matematik temel geliştirme kursları, öğrencilere özel matematik dersleri, bireysel matematik eğitimi, online matematik özel ders, evde matematik dersleri, matematik ders paketi, özel matematik eğitmeni, deneyimli matematik öğretmeni, uygun fiyatlı matematik dersleri, matematik dersine hemen başla, matematikte başarı için özel ders, birebir matematik ders randevusu, özel matematik öğretmeni ara, matematik ders programı oluştur, sınav kazandıran matematik dersleri",
   openGraph: {
     title: "Lokasyon Matematik | Ankara'da Birebir Özel Matematik Dersleri",
     description: "Lokasyon Matematik, Ankara'da birebir özel derslerle matematikte başarıya ulaşmanızı sağlar. Öğrenciye özel ders planı ve tam destek sunuyoruz.",
@@ -57,6 +58,9 @@ export default function RootLayout({ children, pageMetadata = {} }) {
         {/* Dynamic Title and Description */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+
+        {/* Keywords */}
+        <meta name="keywords" content={metadata.keywords} />
 
         {/* SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
