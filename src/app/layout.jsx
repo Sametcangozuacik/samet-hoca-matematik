@@ -1,19 +1,19 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import Inform from "@/components/ınform/ınform";
+import Inform from "@/components/inform/inform";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import styles from "./globals.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+const defaultMetadata = {
   title: "Lokasyon Matematik | Ankara Özel Ders ile Başarıyı Yakalayın",
   description: "Ankara'da birebir matematik dersleri ile sınav başarılarını artırın. Lokasyon Matematik ile uzman öğretmenlerden kişisel matematik dersleri alın.",
   openGraph: {
     title: "Lokasyon Matematik | Ankara'da Birebir Özel Matematik Dersleri",
     description: "Lokasyon Matematik, Ankara'da birebir özel derslerle matematikte başarıya ulaşmanızı sağlar. Öğrenciye özel ders planı ve tam destek sunuyoruz.",
-    image: "/header/sametmathsicon.svg",  
+    image: "/header/sametmathsicon.svg",
     url: "https://www.lokasyonmatematik.com",
     type: "website",
   },
@@ -21,52 +21,70 @@ export const metadata = {
     card: "summary_large_image",
     title: "Lokasyon Matematik | Ankara Özel Matematik Dersleri",
     description: "Ankara'da uzman eğitmenlerden birebir özel matematik dersleri. Öğrencilerin başarılarını artırmak için Lokasyon Matematik ile doğru adreste olun.",
-    image: "/header/sametmathsicon.svg",  
+    image: "/header/sametmathsicon.svg",
   },
   schema: {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Lokasyon Matematik",
-    "description": "Ankara'da birebir özel matematik dersleri.",
-    "url": "https://www.lokasyonmatematik.com",
-    "logo": "/header/sametmathsicon.svg",
-    "contactPoint": {
+    name: "Lokasyon Matematik",
+    description: "Ankara'da birebir özel matematik dersleri.",
+    url: "https://www.lokasyonmatematik.com",
+    logo: "/header/sametmathsicon.svg",
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+90-312-555-1234",
-      "contactType": "Customer Service",
-      "areaServed": "TR",
-      "availableLanguage": "Turkish"
-    }
-  }
+      telephone: "+90-312-555-1234",
+      contactType: "Customer Service",
+      areaServed: "TR",
+      availableLanguage: "Turkish",
+    },
+  },
 };
 
-export default function RootLayout({ children }) {
+// Helper function for metadata merging
+const mergeMetadata = (customMetadata = {}) => ({
+  ...defaultMetadata,
+  ...customMetadata,
+  openGraph: { ...defaultMetadata.openGraph, ...customMetadata.openGraph },
+  twitter: { ...defaultMetadata.twitter, ...customMetadata.twitter },
+});
+
+export default function RootLayout({ children, pageMetadata = {} }) {
+  const metadata = mergeMetadata(pageMetadata);
+
   return (
     <html lang="tr" className={styles.root}>
       <Head>
+        {/* Dynamic Title and Description */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+
+        {/* SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={metadata.openGraph.url} />
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
         <meta property="og:image" content={metadata.openGraph.image} />
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:type" content={metadata.openGraph.type} />
+
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
-        <meta name="google-site-verification" content="Fto9EkJwwrCnn1rAn7M_d0mjpdKPb4AZKFkk-2tdPog" />
+
+        {/* Favicon */}
         <link rel="icon" href="/Titleicon.ico" />
-        <link rel="canonical" href={metadata.openGraph.url} />
-        <script type="application/ld+json">
-          {JSON.stringify(metadata.schema)}
-        </script>
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">{JSON.stringify(metadata.schema)}</script>
       </Head>
       <body className={inter.className}>
         <Inform />
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
