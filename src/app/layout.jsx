@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import Inform from "@/components/ınform/ınform";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import styles from "./globals.module.scss";
@@ -86,7 +85,6 @@ export default function RootLayout({ children, pageMetadata = {} }) {
         <script type="application/ld+json">{JSON.stringify(metadata.schema)}</script>
       </Head>
       <body className={inter.className}>
-        <Inform />
         <Header />
         <main>{children}</main>
         <Footer />
