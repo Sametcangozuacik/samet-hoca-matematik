@@ -7,9 +7,6 @@ import 'moment/locale/tr'; // Türkçe dil desteği
 import Image from "next/image";
 import whatsapp from "../../../public/ınform/wplogicon.svg";
 import gmail from "../../../public/ınform/gmaillogoicon.svg";
-import instagram from "../../../public/ınform/instagramlogoicon.svg";
-import youtube from "../../../public/ınform/youtubeicon.svg";
-import twitter from "../../../public/ınform/twiterlogoicon.svg";
 
 export default function Inform() {
   // Anlık tarihi ve saati tutmak için state
