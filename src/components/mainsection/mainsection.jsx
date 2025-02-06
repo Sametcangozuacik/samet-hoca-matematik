@@ -6,6 +6,7 @@ import styles from "./mainsection.module.scss";
 export default function MainSection() {
     return (
         <main className={styles.mainSection}>
+            <div className={styles.mainSectionBox}>
             <div className={styles.mainSectionContainerBox}>
             <h2 className={styles.mainSectionTitleOne}>
                 Matematikte Zirveye
@@ -25,6 +26,7 @@ export default function MainSection() {
                     src={section}
                     alt="Ankara'nın Uzman Eğitmenlerinden Online veya Yüz Yüze Ders Fırsatları"
                 />
+            </div>
             </div>
         </main>
     );

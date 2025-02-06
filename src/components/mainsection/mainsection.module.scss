@@ -6,11 +6,23 @@
     align-items: center; /* Dikeyde ortalar */
     justify-content: space-between; /* Aralarında boşluk bırak */
     margin: 50px auto;
-    max-width: 1500px; /* Maksimum genişlik belirle */
     gap: 30px; /* Öğeler arası boşluk */
     
     @media (max-width: 768px) {
         flex-direction: column; /* Mobilde dikey hizala */
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
+.mainSectionBox{
+    display: flex;
+    margin: 0 auto;
+    gap: 100px;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
         gap: 20px;
         padding: 10px;
     }
