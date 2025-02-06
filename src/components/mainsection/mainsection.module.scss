@@ -1,140 +1,189 @@
-@use "../../app/_variables.scss" as *;
+@use "../../app/_variables.scss" as vars;
 
 .mainSection {
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 1500px;
-    margin: 0 auto;
-    gap: 150px;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    font-family: $primary-font;
-
+    display: flex;
+    flex-direction: row; /* Öğeleri yatay hizalar */
+    align-items: center; /* Dikeyde ortalar */
+    justify-content: space-between; /* Aralarında boşluk bırak */
+    margin: 50px auto;
+    max-width: 1500px; /* Maksimum genişlik belirle */
+    gap: 30px; /* Öğeler arası boşluk */
+    
     @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: column; /* Mobilde dikey hizala */
+        gap: 20px;
         padding: 10px;
-        margin: 10px;
     }
 }
 
 .mainSectionDescription {
-    color: $secondary-color;
+    color: vars.$secondary-color;
     font-weight: 600;
-    line-height: 1.7;
+    line-height: 1.5; /* Satır yüksekliğini azalttım */
     text-align: justify;
-    margin-right: 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 0; /* Gereksiz margin kaldırıldı */
+    padding: 10px; /* Daha kompakt hale getirildi */
 
     @media (max-width: 768px) {
-        margin-right: 0;
-        max-width: 100%;
-        padding: 30px;
+        padding: 15px;
     }
 }
 
-.mainSectionTitle {
-    font-size: 2.5rem; /* Büyük başlık boyutu */
-    color: $secondary-color; /* Koyu başlık rengi */
-    font-weight: 800; /* Kalın yazı */
-    letter-spacing: 2px; /* Harfler arası geniş boşluk */
-    text-transform: uppercase; /* Büyük harf */
-    padding: 20px 0; /* Üst ve alt boşluk */
-    position: relative; /* Alt çizgiyi yerleştirmek için gerekli */
-    max-width: 90%; /* Genişlik ayarı */
-    margin: 0 auto; /* Ortalanmış */
-    text-align: center; /* Ortalanmış başlık */
-    overflow: hidden; /* Taşan içerik gizlenecek */
-    
-    /* Gradient animasyon efekti */
-    background: linear-gradient(90deg, $secondary-color, lighten($secondary-color, 10%), $secondary-color);
-    background-size: 200%;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: gradient 3s ease-in-out infinite;
+/* Ortak Başlık Stili */
+.mainSectionTitleOne {
+    font-size: 3rem;
+    font-weight: 700;
+    color: vars.$secondary-color;
+    padding: 8px 15px;
+    border-radius: 15px;
+    text-align: center;
+    background: rgb(10, 255, 148);
+    border: 2px solid rgb(10, 255, 148);
 
-    /* Alt çizgi */
-    &:after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background-color: $secondary-color;
-        margin: 15px auto 0;
-        transition: width 0.3s ease-in-out;
-    }
-
-    &:hover:after {
-        width: 100px; /* Hover sırasında genişleyen çizgi */
-    }
-
-    /* Küçük ekranlar için responsive tasarım */
     @media (max-width: 1024px) {
         font-size: 2rem;
     }
 
     @media (max-width: 768px) {
-        font-size: 1.8rem;
-        letter-spacing: 1.5px;
+        font-size: 1.7rem;
+        letter-spacing: 1px;
     }
 
     @media (max-width: 480px) {
-        font-size: 1.6rem;
-        letter-spacing: 1.2px;
+        font-size: 1.5rem;
+        letter-spacing: 0.8px;
     }
 }
 
-/* Gradient animasyonu */
-@keyframes gradient {
-    0% {
-        background-position: 0%;
+.mainSectionTitleTwo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: vars.$secondary-color;
+    padding: 8px 15px;
+    border-radius: 15px;
+    text-align: center;
+    background: rgb(255, 254, 252);
+    border: 2px solid rgb(255, 254, 252);
+    margin-top: -10px;
+
+    @media (max-width: 1024px) {
+        font-size: 2rem;
     }
-    100% {
-        background-position: 200%;
+
+    @media (max-width: 768px) {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+        letter-spacing: 0.8px;
     }
 }
 
+.mainSectionTitleThree {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: vars.$secondary-color;
+    padding: 8px 15px;
+    border-radius: 15px;
+    text-align: center;
+    background: rgb(255, 254, 252);
+    border: 2px solid rgb(255, 254, 252);
+    margin-top: -10px;
+
+    @media (max-width: 1024px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+        letter-spacing: 0.8px;
+    }
+}
+
+.mainP{ 
+    font-size: 1rem;
+    font-weight: 500;
+    color: vars.$secondary-color;
+    text-align: start;
+    border-radius: 15px;
+
+    @media (max-width: 1024px) {
+        font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.7rem;
+        letter-spacing: 0.8px;
+    }
 
 
+}
 
+/* Alternatif Renkler */
+.mainSectionTitle--green {
+    background: rgb(10, 255, 148);
+    border: 2px solid rgb(10, 255, 148);
+}
+
+.mainSectionTitle--white {
+    background: rgb(255, 254, 252);
+    border: 2px solid rgb(255, 254, 252);
+}
 
 .mainSectionImage {
     max-width: 400px;
-    max-height: 500px;
-    border-radius: 20%;
+    max-height: 600px;
+    border-radius: 15%;
+
+    
 
     @media (max-width: 768px) {
-       display: none;
+        display: none;
     }
 }
 
+/* Buton Stilleri */
 .mainSectionBoxButton {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
 }
 
 .mainSectionButton {
-    border: 2px solid $secondary-color;
-    color: $secondary-color;
-    padding: 12px 25px;
-    border-radius: 12px;
+    border: 2px solid vars.$secondary-color;
+    color: vars.$secondary-color;
+    padding: 10px 20px;
+    border-radius: 10px;
     font-weight: 600;
     text-align: center;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.6); // Semi-transparent background
-    backdrop-filter: blur(8px); // Background blur effect
-    
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    max-width: 100px;
+    cursor: pointer;
+
     &:hover {
-        background-color: rgba(255, 255, 255, 0.8); // Slightly more opaque on hover
-        color: $primary-color;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: vars.$primary-color;
         transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     }
 
     &:active {
@@ -142,39 +191,47 @@
         box-shadow: none;
     }
 }
- 
+
+
+/* İçerik Kutusu */
+.mainSectionContainerBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px; /* Boşlukları azalttım */
+    padding: 5px; /* Padding'i düşürdüm */
+
+    @media (max-width: 768px) {
+        gap: 8px;
+        padding: 5px;
+    }
+}
+
+/* Ana İçerik */
 .mainSectionContainer {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
     align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    max-width: 1500px;
-    margin: 0 auto; /* Merkezi hizalama */
-    border: 3px solid $primary-color;
-    border-radius: 15%;
-    background-color: $tertiary-color;
+    padding: 20px;
+    margin: 0 auto;
 
-    /* İçerik hizalama ve görünüm düzenleme */
     & > * {
         flex: 1;
-        min-width: 0; /* İçerik taşmasının önlenmesi */
+        min-width: 0;
     }
 
     @media (max-width: 1024px) {
-        gap: 40px;
+        gap: 30px;
         padding: 15px;
     }
 
     @media (max-width: 768px) {
-        flex-direction: column; /* Mobilde dikey hizalama */
-        gap: 30px;
+        flex-direction: column;
+        gap: 20px;
         padding: 10px;
     }
 
     @media (max-width: 480px) {
-        gap: 20px; /* Daha dar ekranlar için boşluk azaltma */
+        gap: 15px;
         padding: 5px;
     }
 }
