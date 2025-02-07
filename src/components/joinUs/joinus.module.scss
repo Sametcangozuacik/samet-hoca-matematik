@@ -1,7 +1,9 @@
 @use "../../app/variables.scss" as *;
 
 .joinUs {
-    max-width: 600px;
+    max-width: 1500px;
+    border: 2px solid $secondary-color;
+    border-radius: 15px ;
     margin: 50px auto; // Sayfa ortalama
     padding: 30px;
     text-align: center;
@@ -11,14 +13,15 @@
     h2 {
         font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 15px;
+        
         color: $secondary-color; // Tema rengine uygun başlık
     }
 
     p {
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.9;
         color: #444;
+        margin-bottom: 30px;
     }
 
     // Responsive Design
@@ -38,6 +41,7 @@
 
 .mainSectionBoxButton {
     border: 2px solid $secondary-color;
+    color: $secondary-color;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: 600;
