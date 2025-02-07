@@ -5,6 +5,7 @@ import MainTable from "@/components/maintable/maintable";
 import DemoLesson from "@/components/demolesson/demolesson";
 import FixedIcons from "@/components/FixedIcons/FixedIcons";
 import Membership from "@/components/membership/membership";
+import JoinUs from "@/components/joinUs/joinus";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <MainTable />
         <DemoLesson />
         <FixedIcons />
+        <JoinUs />
       </main>
     </>
   );

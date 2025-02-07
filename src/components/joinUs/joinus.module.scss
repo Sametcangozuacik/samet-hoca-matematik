@@ -1,0 +1,66 @@
+@use "../../app/variables.scss" as *;
+
+.joinUs {
+    max-width: 600px;
+    margin: 50px auto; // Sayfa ortalama
+    padding: 30px;
+    text-align: center;
+    font-family: $primary-font;
+    color: #333;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: $secondary-color; // Tema rengine uygun başlık
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    // Responsive Design
+    @media (max-width: 768px) {
+        max-width: 90%;
+        padding: 20px;
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+        }
+    }
+}
+
+.mainSectionBoxButton {
+    border: 2px solid $secondary-color;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    max-width: 100px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: $primary-color;
+        transform: translateY(-2px);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+}
