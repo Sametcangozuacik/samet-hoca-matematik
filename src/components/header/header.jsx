@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import hamburger from '../../../public/header/hamburgermenuicon.svg';
 import logo from '../../../public/header/sametmathsicon.svg';
+import logo1 from '../../../public/header/sametmathsicon1.svg';
 import home from '../../../public/header/homeicon.svg';
 import about from '../../../public/header/abouticon.svg';
 import services from '../../../public/header/servicesicon.svg';
@@ -14,25 +15,25 @@ import styles from './header.module.scss';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [subMenuOpen, setSubMenuOpen] = useState(null); // To track which submenu is open
-    const [windowWidth, setWindowWidth] = useState(0); // To track window width
+    const [subMenuOpen, setSubMenuOpen] = useState(null);
+    const [windowWidth, setWindowWidth] = useState(0);
     const headerRef = useRef(null);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        setSubMenuOpen(null); // Close all submenus when the main menu is toggled
+        setSubMenuOpen(null);
     };
 
     const toggleSubMenu = (index, event) => {
-        event.preventDefault(); // Prevent the default link behavior
-        setSubMenuOpen(subMenuOpen === index ? null : index); // Toggle the specific submenu
+        event.preventDefault();
+        setSubMenuOpen(subMenuOpen === index ? null : index);
     };
 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (headerRef.current && !headerRef.current.contains(event.target)) {
                 setMenuOpen(false);
-                setSubMenuOpen(null); // Close all submenus when clicking outside
+                setSubMenuOpen(null);
             }
         };
 
@@ -47,13 +48,12 @@ export default function Header() {
         };
     }, [menuOpen]);
 
-    // Handle window resize
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         };
 
-        handleResize(); // Set initial width
+        handleResize();
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -63,7 +63,13 @@ export default function Header() {
 
     return (
         <header className={styles.header} ref={headerRef}>
-            <Image className={styles.headerLogo} src={logo} alt="Site Logo" />
+            <Image 
+                className={styles.headerLogo} 
+                src={windowWidth < 768 ? logo1 : logo} 
+                alt="Site Logo" 
+                width={windowWidth < 768 ? 180 : 150} 
+                height={windowWidth < 768 ? 60 : 50} 
+            />
             {windowWidth <= 600 && (
                 <div className={styles.phoneLink}>
                     <Link href="tel:+905073195505">
@@ -76,9 +82,9 @@ export default function Header() {
             </button>
             <ul className={`${styles.link} ${menuOpen ? styles.open : ''}`}>
                 <li><Link className={styles.headerlink} href="/"><Image src={home} width={24} height={24} alt="home" />Anasayfa</Link></li>
-                <li><Link className={styles.headerlink} href="/ours"><Image src={about} width={24} height={24} alt="home" />Biz Kimiz ?</Link></li>
-                <li><Link className={styles.headerlink} href="/communication"><Image src={services} width={24} height={24} alt="home" />Hizmetlerimiz</Link></li>
-                <li><Link className={styles.headerlink} href="/communication"><Image src={phone} width={24} height={24} alt="home" />İletişim</Link></li>
+                <li><Link className={styles.headerlink} href="/ours"><Image src={about} width={24} height={24} alt="about" />Biz Kimiz ?</Link></li>
+                <li><Link className={styles.headerlink} href="/communication"><Image src={services} width={24} height={24} alt="services" />Hizmetlerimiz</Link></li>
+                <li><Link className={styles.headerlink} href="/communication"><Image src={phone} width={24} height={24} alt="phone" />İletişim</Link></li>
             </ul>
         </header>
     );

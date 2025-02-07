@@ -164,7 +164,7 @@ export default function Footer() {
             </footer>
             <footer className={styles.footerBottom}>
                 <div className={styles.footerBottomBox}>
-                    <p className={styles.footerBottomText}>© 2024 Lokasyon Matematik. Tüm Hakları Saklıdır.</p>
+                    <p className={styles.footerBottomText}>© 2025 Lokasyon Matematik. Tüm Hakları Saklıdır.</p>
                 </div>
             </footer>
         </main>
