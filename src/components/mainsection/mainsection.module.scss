@@ -1,25 +1,71 @@
 @use "../../app/_variables.scss" as vars;
 
-.mainSection {
-    display: flex;
-    flex-direction: row; /* Öğeleri yatay hizalar */
-    align-items: center; /* Dikeyde ortalar */
-    justify-content: space-between; /* Aralarında boşluk bırak */
-    margin: 50px auto;
-    gap: 30px; /* Öğeler arası boşluk */
-    
-    @media (max-width: 768px) {
-        flex-direction: column; /* Mobilde dikey hizala */
-        gap: 20px;
-        padding: 10px;
+// Genel Animasyonlar
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
-.mainSectionBox{
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+// Ana Konteyner
+.mainSection {
     display: flex;
-    margin: 0 auto;
-    gap: 100px;
-    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    gap: 30px;
+    animation: fadeIn 1s ease-in-out;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -28,17 +74,19 @@
     }
 }
 
-.mainSectionDescription {
-    color: vars.$secondary-color;
-    font-weight: 600;
-    line-height: 1.5; /* Satır yüksekliğini azalttım */
-    text-align: justify;
-    font-size: 1rem;
-    margin: 0; /* Gereksiz margin kaldırıldı */
-    padding: 10px; /* Daha kompakt hale getirildi */
+// İçerik Kutusu
+.mainSectionBox {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 100px;
+    padding: 20px;
+    animation: slideInLeft 1s ease-in-out;
 
     @media (max-width: 768px) {
-        padding: 15px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
     }
 }
 
@@ -144,36 +192,21 @@
 
 }
 
-/* Alternatif Renkler */
-.mainSectionTitle--green {
-    background: rgb(10, 255, 148);
-    border: 2px solid rgb(10, 255, 148);
-}
 
-.mainSectionTitle--white {
-    background: rgb(255, 254, 252);
-    border: 2px solid rgb(255, 254, 252);
-}
 
+// Resim Animasyonu
 .mainSectionImage {
     max-width: 400px;
     max-height: 600px;
     border-radius: 15%;
-
-    
+    animation: rotateIn 1.2s ease-in-out;
 
     @media (max-width: 768px) {
         display: none;
     }
 }
 
-/* Buton Stilleri */
-.mainSectionBoxButton {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
+// Buton Stilleri
 .mainSectionButton {
     border: 2px solid vars.$secondary-color;
     color: vars.$secondary-color;
@@ -190,60 +223,17 @@
     backdrop-filter: blur(5px);
     max-width: 100px;
     cursor: pointer;
+    animation: fadeIn 0.8s ease-in-out;
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.7);
         color: vars.$primary-color;
-        transform: translateY(-2px);
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(10, 255, 148, 0.7);
     }
 
     &:active {
-        transform: translateY(0);
+        transform: scale(1);
         box-shadow: none;
-    }
-}
-
-
-/* İçerik Kutusu */
-.mainSectionContainerBox {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px; /* Boşlukları azalttım */
-    padding: 5px; /* Padding'i düşürdüm */
-
-    @media (max-width: 768px) {
-        gap: 8px;
-        padding: 5px;
-    }
-}
-
-/* Ana İçerik */
-.mainSectionContainer {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 0 auto;
-
-    & > * {
-        flex: 1;
-        min-width: 0;
-    }
-
-    @media (max-width: 1024px) {
-        gap: 30px;
-        padding: 15px;
-    }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px;
-    }
-
-    @media (max-width: 480px) {
-        gap: 15px;
-        padding: 5px;
     }
 }
