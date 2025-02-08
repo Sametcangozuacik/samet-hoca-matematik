@@ -14,12 +14,14 @@
     animation: fadeIn 1s ease-in-out;
 
     h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: $secondary-color;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        animation: slideInDown 1s ease-in-out;
+        font-size: 2.5rem; /* Başlık boyutunu büyütür */
+        color: #333; /* Başlık rengi */
+        text-align: center; /* Ortalar */
+        font-weight: 700; /* Kalın yazı stili */
+        letter-spacing: 1px; /* Harfler arası boşluk */
+        padding-bottom: 20px; /* Alt kısımdan boşluk */
+        margin-bottom: 30px; /* Başlıktan sonra boşluk bırakır */
+        position: relative; /* Altındaki çizgiyi yerleştirmek için gerekli */
     }
 
     p {

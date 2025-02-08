@@ -15,11 +15,14 @@
 }
 
 .memberShipSectionHeading {
-    font-size: 2.5rem; // Başlık boyutu
-    color: #333; // Başlık rengi
-    text-align: center; // Ortalar
-    font-weight: 700; // Kalın yazı stili
-    margin-bottom: 30px; // Başlıktan sonra boşluk bırakır
+    font-size: 2.5rem; /* Başlık boyutunu büyütür */
+    color: #333; /* Başlık rengi */
+    text-align: center; /* Ortalar */
+    font-weight: 700; /* Kalın yazı stili */
+    letter-spacing: 1px; /* Harfler arası boşluk */
+    padding-bottom: 20px; /* Alt kısımdan boşluk */
+    margin-bottom: 30px; /* Başlıktan sonra boşluk bırakır */
+    position: relative; /* Altındaki çizgiyi yerleştirmek için gerekli */
 
     // Responsive tasarım için medya sorguları
     @media (max-width: 768px) {
