@@ -52,11 +52,12 @@
     margin-top: 10px;
     color: $secondary-color;
     font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .abilitiesTitle {
     font-size: 2.5rem; /* Başlık boyutunu büyütür */
-    color: #333; /* Başlık rengi */
+    color: $secondary-color; /* Başlık rengi */
     text-align: center; /* Ortalar */
     font-weight: 700; /* Kalın yazı stili */
     letter-spacing: 1px; /* Harfler arası boşluk */

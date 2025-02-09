@@ -15,7 +15,7 @@
 
     h2 {
         font-size: 2.5rem; /* Başlık boyutunu büyütür */
-        color: #333; /* Başlık rengi */
+        color: $secondary-color; /* Başlık rengi */
         text-align: center; /* Ortalar */
         font-weight: 700; /* Kalın yazı stili */
         letter-spacing: 1px; /* Harfler arası boşluk */
@@ -27,7 +27,7 @@
     p {
         font-size: 1.1rem;
         line-height: 1.8;
-        color: #444;
+        color: $secondary-color;
         margin-bottom: 30px;
         max-width: 800px;
         margin-left: auto;

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footer.module.scss";
 import Image from 'next/image';
-import logo from '../../../public/header/sametmathsicon1.svg';
+import logo from '../../../public/header/sametmathsicon.svg';
 import Link from 'next/link';
 import book from '../../../public/footer/bookicon.svg';
 import bookopen from '../../../public/footer/bookopenicon.svg';
@@ -24,7 +24,7 @@ export default function Footer() {
         <main>
             <footer className={styles.footer}>
                 <div className={styles.col}>
-                    <Image className={styles.colImage} src={logo} width={180} height={180} alt="Lokasyon Matematik Logo" />
+                    <Image className={styles.colImage} src={logo} width={300} height={200} alt="Lokasyon Matematik Logo" />
                     <p className={styles.colText}>Matematiğe dair her şey!</p>
                     <div className={styles.ınformSectionTwo}>
                         <a 
