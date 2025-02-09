@@ -8,7 +8,6 @@ import logo from '../../../public/header/sametmathsicon.svg';
 import logo1 from '../../../public/header/sametmathsicon1.svg';
 import home from '../../../public/header/homeicon.svg';
 import about from '../../../public/header/abouticon.svg';
-import services from '../../../public/header/servicesicon.svg';
 import phone from '../../../public/header/phoneicon.svg';
 import costumer from '../../../public/header/customericon.svg';
 import styles from './header.module.scss';
@@ -83,7 +82,6 @@ export default function Header() {
             <ul className={`${styles.link} ${menuOpen ? styles.open : ''}`}>
                 <li><Link className={styles.headerlink} href="/"><Image src={home} width={24} height={24} alt="home" />Anasayfa</Link></li>
                 <li><Link className={styles.headerlink} href="/ours"><Image src={about} width={24} height={24} alt="about" />Biz Kimiz ?</Link></li>
-                <li><Link className={styles.headerlink} href="/communication"><Image src={services} width={24} height={24} alt="services" />Hizmetlerimiz</Link></li>
                 <li><Link className={styles.headerlink} href="/communication"><Image src={phone} width={24} height={24} alt="phone" />İletişim</Link></li>
             </ul>
         </header>
