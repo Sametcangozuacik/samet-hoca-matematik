@@ -5,6 +5,7 @@ import MainTable from "@/components/maintable/maintable";
 import DemoLesson from "@/components/demolesson/demolesson";
 import FixedIcons from "@/components/FixedIcons/FixedIcons";
 import Membership from "@/components/membership/membership";
+import Publications from "@/components/publications/publications";
 import JoinUs from "@/components/joinUs/joinus";
 import WithUs from "@/components/withus/withus";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Membership />
         <MainTable />
         <DemoLesson />
+        <Publications/>
         <FixedIcons />
         <WithUs />
         <JoinUs />
