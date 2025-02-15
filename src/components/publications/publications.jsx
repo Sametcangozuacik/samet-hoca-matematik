@@ -8,6 +8,7 @@ import bilgısarmal from "../../../public/publications/bılgısarmallogo.png";
 import orginal from "../../../public/publications/orgınallogo.png";
 import ucdortbeslogo from "../../../public/publications/345logo.png";
 import antreman from "../../../public/publications/antremanlogo.png";
+import hız from "../../../public/publications/hızlogo.svg";
 
 export default function Publications() {
     return (
@@ -21,6 +22,7 @@ export default function Publications() {
                 <Image src={orginal} width={200} height={70} alt="Orjinal Yayınları" className={styles.orginal} />
                 <Image src={ucdortbeslogo} width={200} height={70} alt="Orjinal Yayınları" className={styles.orginal} />
                 <Image src={antreman} width={200} height={70} alt="Orjinal Yayınları" className={styles.orginal} />
+                <Image src={hız} width={200} height={70} alt="Orjinal Yayınları" className={styles.orginal} />
             </div>
         </div>
     );

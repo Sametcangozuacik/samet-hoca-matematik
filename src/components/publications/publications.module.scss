@@ -3,6 +3,9 @@
 .publicationsContainer {
     text-align: center;
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 
     .title {
@@ -13,95 +16,69 @@
     }
 
     .publicationsBox {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 30px;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 20px;
         max-width: 1000px;
-        margin: 0 auto;
+        width: 100%;
 
         img {
-            width: 180px;
+            width: 100%;
+            max-width: 180px;
             height: auto;
-            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+            transition: transform 0.3s ease, filter 0.3s ease;
             padding: 10px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
             &:hover {
                 transform: scale(1.1);
-                filter: brightness(1.2);
+                filter: brightness(1.15);
             }
         }
     }
 }
 
-// Özel Filtreler
-.karekok {
-    filter: grayscale(10%);
+// Özel Filtreler (Tekrarları azaltılmış hali)
+@mixin grayscale-filter($value) {
+    filter: grayscale($value);
     margin: 10px;
 }
 
-.ozdemir {
-    filter: grayscale(30%);
-    margin: 10px;
+.karekok { @include grayscale-filter(10%); }
+.ozdemir { @include grayscale-filter(30%); }
+.ucdortbes { @include grayscale-filter(40%); }
+.fenomen { @include grayscale-filter(50%); }
+.antreman, .hız { @include grayscale-filter(60%); }
+.bilgısarmal { @include grayscale-filter(70%); }
+.orginal { @include grayscale-filter(90%); }
+
+// Responsive Tasarım
+@media (max-width: 1024px) {
+    .publicationsBox {
+        flex-direction: column;
+    }
 }
 
-.fenomen {
-    filter: grayscale(50%);
-    margin: 10px;
-}
-
-.bilgısarmal {
-    filter: grayscale(70%);
-    margin: 10px;
-}
-
-.orginal {
-    filter: grayscale(90%);
-    margin: 10px;
-}
-
-.ucdortbes {
-    filter: grayscale(40%);
-    margin: 10px;
-}
-
-.antreman {
-    filter: grayscale(60%);
-    margin: 10px;
-}
-
-// **Responsive Tasarım**
 @media (max-width: 768px) {
     .publicationsContainer {
         padding: 30px 10px;
 
         .title {
-            font-size: 24px;
-        }
-
-        .publicationsBox {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-
-            img {
-                width: 150px;
-                padding: 5px;
-            }
+            font-size: 2rem;
         }
     }
 }
 
 @media (max-width: 480px) {
     .publicationsBox {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 15px;
+        flex-direction: column;
+        gap: 10px;
 
         img {
-            width: 130px;
+            max-width: 140px;
         }
     }
 }
