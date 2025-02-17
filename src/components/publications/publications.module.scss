@@ -16,10 +16,9 @@
     }
 
     .publicationsBox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 4fr));
+        gap: 20px; // Varsayılan boşluk
         max-width: 1000px;
         width: 100%;
 
@@ -56,9 +55,15 @@
 .orginal { @include grayscale-filter(90%); }
 
 // Responsive Tasarım
+@media (min-width: 1024px) {
+    .publicationsBox {
+        gap: 40px; // Masaüstünde daha fazla boşluk
+    }
+}
+
 @media (max-width: 1024px) {
     .publicationsBox {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -74,11 +79,13 @@
 
 @media (max-width: 480px) {
     .publicationsBox {
-        flex-direction: column;
-        gap: 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important; // Mobilde de biraz boşluk bırak
+    }
 
-        img {
-            max-width: 140px;
-        }
+    .publicationsBox img {
+        max-width: 140px !important;
     }
 }
