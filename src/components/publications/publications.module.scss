@@ -1,91 +1,39 @@
 @use "../../app/_variables.scss" as *;
 
 .publicationsContainer {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
     text-align: center;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    .title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 30px;
-        color: $secondary-color;
-    }
-
-    .publicationsBox {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 4fr));
-        gap: 20px; // Varsayılan boşluk
-        max-width: 1000px;
-        width: 100%;
-
-        img {
-            width: 100%;
-            max-width: 180px;
-            height: auto;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            padding: 10px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-            &:hover {
-                transform: scale(1.1);
-                filter: brightness(1.15);
-            }
-        }
-    }
+    color: $secondary-color;
+    letter-spacing: 1px;
 }
 
-// Özel Filtreler (Tekrarları azaltılmış hali)
-@mixin grayscale-filter($value) {
-    filter: grayscale($value);
-    margin: 10px;
+.publicationsBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-.karekok { @include grayscale-filter(10%); }
-.ozdemir { @include grayscale-filter(30%); }
-.ucdortbes { @include grayscale-filter(40%); }
-.fenomen { @include grayscale-filter(50%); }
-.antreman, .hız { @include grayscale-filter(60%); }
-.bilgısarmal { @include grayscale-filter(70%); }
-.orginal { @include grayscale-filter(90%); }
+.publicationsBoxLogo {
+    border-radius: 12px;
+    padding: 15px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
-// Responsive Tasarım
-@media (min-width: 1024px) {
-    .publicationsBox {
-        gap: 40px; // Masaüstünde daha fazla boşluk
-    }
-}
-
-@media (max-width: 1024px) {
-    .publicationsBox {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .publicationsContainer {
-        padding: 30px 10px;
-
-        .title {
-            font-size: 2rem;
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .publicationsBox {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 15px !important; // Mobilde de biraz boşluk bırak
-    }
-
-    .publicationsBox img {
-        max-width: 140px !important;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 0, 0, 1);
     }
 }
