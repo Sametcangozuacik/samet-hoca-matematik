@@ -12,7 +12,7 @@ import Membership from "@/components/membership/membership";
 import Publications from "@/components/publications/publications";
 import JoinUs from "@/components/joinUs/joinus";
 import WithUs from "@/components/withus/withus";
-import { MapPin } from "lucide-react"; // konum simgesi için
+import { MapPin } from "lucide-react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // 2 saniye sonra yükleyici kapanır
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -34,18 +34,15 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      {/* Lokasyon Matematik Açılış Animasyonu */}
       {isLoading && (
         <div className={styles.loaderWrapper}>
           <div className={styles.loaderContent}>
             <MapPin size={64} color="#38bdf8" />
-            <div className={styles.ring}></div>
             <span className={styles.logoText}>Lokasyon Matematik</span>
           </div>
         </div>
       )}
 
-      {/* Sayfa İçeriği */}
       {!isLoading && (
         <main className={styles.main}>
           <MainSection />
