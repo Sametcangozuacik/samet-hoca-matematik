@@ -62,12 +62,12 @@ export default function Header() {
 
     return (
         <header className={styles.header} ref={headerRef}>
-            <Image 
-                className={styles.headerLogo} 
-                src={windowWidth < 768 ? logo1 : logo} 
-                alt="Site Logo" 
-                width={windowWidth < 768 ? 180 : 150} 
-                height={windowWidth < 768 ? 60 : 50} 
+            <Image
+                className={styles.headerLogo}
+                src={windowWidth < 768 ? logo1 : logo}
+                alt="Site Logo"
+                width={windowWidth < 768 ? 140 : 120}
+                height={windowWidth < 768 ? 50 : 40}
             />
             {windowWidth <= 600 && (
                 <div className={styles.phoneLink}>

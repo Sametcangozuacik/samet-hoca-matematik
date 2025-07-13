@@ -1,161 +1,129 @@
 @use "../../app/_variables.scss" as *;
 
+/* === ANA FOTER === */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    flex-wrap: wrap;
-    border-top: 1px solid $secondary-color; // Üst çizgi eklendi
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem 2rem;
+  border-top: 2px solid $secondary-color;
+  backdrop-filter: blur(8px);
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
 }
 
+/* === SOL BLOK (LOGO) === */
 .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1; // Esnek genişlik sağlamak için flex kullanıyoruz
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.colImage {
+  max-width: 240px;
+  height: auto;
 }
 
 .colText {
-    color: $secondary-color;
-    font-family: $primary-font;
-    font-size: 1rem;
-    margin: -20px;
-    text-align: center;
+  font-family: $primary-font;
+  font-size: 1rem;
+  color: $secondary-color;
+  margin: 0;
 }
 
+/* === ALT BAŞLIK BLOKLARI === */
 .footerBox {
-    display: flex;
-    flex-direction: column;
-    margin: 0 10px;
-    gap: 10px;
-    font-size: 1rem;
-    flex: 1; 
-
-    @media screen and (max-width: 768px) {
-        margin-top: 20px;
-        align-items: center;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .footerBoxH2 {
-    color: $secondary-color;
-    font-family: $primary-font;
-    font-size: 1.3rem;
-    margin: 0;
+  font-family: $primary-font;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $secondary-color;
+  border-left: 4px solid $primary-color;
+  padding-left: 10px;
+  margin-bottom: 0.3rem;
 }
 
+/* === LİSTELER === */
 .footerBoxList {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.footerBoxListLink {
-    display: flex;
-    align-items: center;
-    color: $secondary-color;
-    font-family: $primary-font;
-    font-size: 1rem;
-    text-decoration: none;
-    gap: 5px;
+.footerBoxListLink,
+.ınformSectionLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $primary-font;
+  font-size: 1rem;
+  text-decoration: none;
+  color: $secondary-color;
+  transition: all 0.2s ease;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    color: darken($primary-color, 15%);
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
+}
+
+/* === SOSYAL İKONLAR === */
+.ınformSectionTwo {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .ınformSectionLinKTwo {
-    display: flex;
-    align-items: center;
-    border: 1px solid $secondary-color;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  border: 1px solid $secondary-color;
+  border-radius: 8px;
+  background-color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 
-    &:hover {
-        background-color: $primary-color;
-    }
+  &:hover {
+    background-color: $primary-color;
+    transform: scale(1.05);
+  }
 }
 
-.ınformSectionTwo {
-    display: flex;
-    margin-top: 2.5cqmax;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-}
-
-.ınformSectionLink {
-    color: $secondary-color;
-    font-family: $primary-font;
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
+/* === ALT KISIM (COPYRIGHT) === */
 .footerBottom {
-    margin-top: 5px;
-    border-top: 1px solid $secondary-color; // Alt çizgi
-    text-align: center;
+  border-top: 1px solid $secondary-color;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #f3eee6;
 }
 
 .footerBottomText {
-    color: $secondary-color;
-    font-family: $primary-font;
-    font-size: 0.8rem;
-    margin: 5px 0;
-}
+  font-family: $primary-font;
+  font-size: 0.9rem;
+  color: $secondary-color;
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .footerBox {
-        margin-bottom: 20px; // Alt boşluk ekledik, böylece her bölüm arasında yer kalır
-    }
-
-    .footerBoxList {
-        align-items: center;
-    }
-
-    .ınformSectionTwo {
-        align-items: center;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .colText {
-        font-size: 0.65rem;
-    }
-
-    .footerBoxH2 {
-        font-size: 0.85rem;
-    }
-
-    .footerBoxListLink {
-        font-size: 0.65rem;
-    }
-
-    .footerBottomText {
-        font-size: 0.65rem;
-    }
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 }

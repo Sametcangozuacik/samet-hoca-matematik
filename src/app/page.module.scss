@@ -3,42 +3,33 @@
   margin: 0;
 }
 
-/* Yükleyici Genel Stil */
+/* === YÜKLEYİCİ === */
 .loaderWrapper {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #ffffff, #f2f5fc);
+  background-color: #f8f1e9;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: fadeOut 0.6s ease-in-out forwards;
-  animation-delay: 1.5s;
-}
-
-/* Fade-out animasyonu */
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 .loaderContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
+  animation: fadeIn 1s ease-out;
 }
 
-/* Dönen halka */
 .ring {
   width: 70px;
   height: 70px;
-  border: 5px solid #ddd;
-  border-top: 5px solid #2a7de1;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #2a7de1;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 0.9s linear infinite;
+  box-shadow: 0 0 12px rgba(42, 125, 225, 0.3);
 }
 
 @keyframes spin {
@@ -47,13 +38,13 @@
   }
 }
 
-/* Logo Yazısı */
 .logoText {
   font-family: 'Segoe UI', sans-serif;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #2a7de1;
-  animation: fadeInUp 0.8s ease-in-out;
+  animation: fadeInUp 1s ease-in-out;
+  letter-spacing: 0.5px;
 }
 
 @keyframes fadeInUp {
@@ -65,4 +56,22 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === ANA İÇERİK === */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
 }

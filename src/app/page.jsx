@@ -12,7 +12,6 @@ import Membership from "@/components/membership/membership";
 import Publications from "@/components/publications/publications";
 import JoinUs from "@/components/joinUs/joinus";
 import WithUs from "@/components/withus/withus";
-import { MapPin } from "lucide-react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,22 +27,26 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ana Sayfa</title>
-        <meta name="description" content="Ankara özel ders sayfamız." />
-        <meta name="keywords" content="Matematik dersleri, Özel matematik dersi, Ankara özel ders" />
+        <title>Lokasyon Matematik | Ankara Özel Ders</title>
+        <meta name="description" content="Ankara’da birebir matematik özel dersiyle başarıya ulaşın. Hemen ücretsiz deneme dersi alın!" />
+        <meta name="keywords" content="matematik özel ders, Ankara özel ders, LGS, AYT, TYT, KPSS, birebir ders" />
         <meta name="robots" content="index, follow" />
+        {/* Sosyal medya meta */}
+        <meta property="og:title" content="Lokasyon Matematik" />
+        <meta property="og:description" content="Başarıya giden yolda seninleyiz. Lokasyon Matematik ile hedefe ulaş!" />
+        <meta property="og:image" content="/header/sametmathsicon.svg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {isLoading && (
+      {isLoading ? (
         <div className={styles.loaderWrapper}>
           <div className={styles.loaderContent}>
-            <MapPin size={64} color="#38bdf8" />
+            <div className={styles.ring}></div>
             <span className={styles.logoText}>Lokasyon Matematik</span>
           </div>
         </div>
-      )}
-
-      {!isLoading && (
+      ) : (
         <main className={styles.main}>
           <MainSection />
           <Membership />
@@ -58,3 +61,4 @@ export default function Home() {
     </>
   );
 }
+

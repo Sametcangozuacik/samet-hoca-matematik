@@ -2,86 +2,46 @@
 
 // Genel Animasyonlar
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    60% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-    }
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes rotateIn {
-    from {
-        opacity: 0;
-        transform: rotate(-10deg) scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-    }
+    from { opacity: 0; transform: rotate(-10deg) scale(0.8); }
+    to { opacity: 1; transform: rotate(0deg) scale(1); }
 }
 
-// Ana Konteyner
+// Ana Konteyner: İçerik yukarıda ve ortalanmış
 .mainSection {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px auto;
+    align-items: flex-start;        // içerik yukarıda hizalı
+    justify-content: center;        // yatay ortalama
+    min-height: 100vh;
+    padding-top: 60px;              // üst boşluk
     gap: 30px;
     animation: fadeIn 1s ease-in-out;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px;
-    }
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 // İçerik Kutusu
 .mainSectionBox {
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
     gap: 100px;
     padding: 20px;
     animation: slideInLeft 1s ease-in-out;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -90,109 +50,67 @@
     }
 }
 
-/* Ortak Başlık Stili */
+/* Başlıklar */
+.mainSectionTitleOne,
+.mainSectionTitleTwo,
+.mainSectionTitleThree {
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: vars.$secondary-color;
+    margin: 0;
+
+    @media (max-width: 1024px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+        letter-spacing: 0.8px;
+    }
+}
+
 .mainSectionTitleOne {
     font-size: 3rem;
-    font-weight: 700;
-    color: vars.$secondary-color;
-    padding: 8px 15px;
-    border-radius: 15px;
-    text-align: center;
     background: rgb(10, 255, 148);
     border: 2px solid rgb(10, 255, 148);
-
-    @media (max-width: 1024px) {
-        font-size: 2rem;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 1.7rem;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width: 480px) {
-        font-size: 1.5rem;
-        letter-spacing: 0.8px;
-    }
 }
 
-.mainSectionTitleTwo {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: vars.$secondary-color;
-    padding: 8px 15px;
-    border-radius: 15px;
-    text-align: center;
-    background: rgb(255, 254, 252);
-    border: 2px solid rgb(255, 254, 252);
-    margin-top: -10px;
-
-    @media (max-width: 1024px) {
-        font-size: 2rem;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 1.7rem;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width: 480px) {
-        font-size: 1.5rem;
-        letter-spacing: 0.8px;
-    }
-}
-
+.mainSectionTitleTwo,
 .mainSectionTitleThree {
     font-size: 2.5rem;
-    font-weight: 700;
-    color: vars.$secondary-color;
-    padding: 8px 15px;
-    border-radius: 15px;
-    text-align: center;
     background: rgb(255, 254, 252);
     border: 2px solid rgb(255, 254, 252);
     margin-top: -10px;
-
-    @media (max-width: 1024px) {
-        font-size: 2rem;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 1.7rem;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width: 480px) {
-        font-size: 1.5rem;
-        letter-spacing: 0.8px;
-    }
 }
 
-.mainP{ 
+// Paragraf
+.mainP {
     font-size: 1rem;
     font-weight: 500;
     color: vars.$secondary-color;
     text-align: start;
     border-radius: 15px;
-
-    @media (max-width: 1024px) {
-        font-size: 1rem;
-    }
+    max-width: 480px;
+    margin: 1.5rem 0;
 
     @media (max-width: 768px) {
         font-size: 0.8rem;
         letter-spacing: 1px;
+        max-width: 100%;
     }
 
     @media (max-width: 480px) {
         font-size: 0.7rem;
         letter-spacing: 0.8px;
     }
-
-
 }
-
-
 
 // Resim Animasyonu
 .mainSectionImage {
@@ -221,7 +139,7 @@
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
-    max-width: 100px;
+    max-width: 140px;
     cursor: pointer;
     animation: fadeIn 0.8s ease-in-out;
 
