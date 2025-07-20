@@ -1,7 +1,4 @@
-# Lokasyon Matematik robots.txt
-
-User-Agent: *
+User-agent: *
 Allow: /
-Disallow: /
 
-Sitemap: https://www.lokasyonmatematik.com/robots.txt
+Sitemap: https://www.lokasyonmatematik.com/sitemap.xml

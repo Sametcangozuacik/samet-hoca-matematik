@@ -38,7 +38,6 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {isLoading ? (
         <div className={styles.loaderWrapper}>
           <div className={styles.loaderContent}>
