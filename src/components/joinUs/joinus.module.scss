@@ -4,14 +4,12 @@
   max-width: 1200px;
   margin: 50px auto;
   padding: 40px;
-  border: 2px solid $secondary-color;
   border-radius: 20px;
   text-align: center;
   font-family: $primary-font;
   color: #333;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+ background: linear-gradient(135deg, #fdfbfb, #ebedee);
   animation: fadeIn 1s ease-in-out;
 
   h2 {
