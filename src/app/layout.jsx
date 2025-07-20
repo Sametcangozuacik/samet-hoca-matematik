@@ -43,7 +43,7 @@ export default function RootLayout({ children, pageMetadata = {} }) {
         <meta name="twitter:image" content={metadata.twitter.image} />
 
         {/* Favicon */}
-        <link rel="icon" href="/Titleicon.ico" />
+        <link rel="icon" href="./public/Titleicon.ico" />
 
         {/* JSON-LD */}
         <script
