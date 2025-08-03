@@ -80,9 +80,35 @@ export default function Header() {
                 <Image src={hamburger} width={48} height={48} alt="Menu" />
             </button>
             <ul className={`${styles.link} ${menuOpen ? styles.open : ''}`}>
-                <li><Link className={styles.headerlink} href="/"><Image src={home} width={24} height={24} alt="home" />Anasayfa</Link></li>
-                <li><Link className={styles.headerlink} href="/ours"><Image src={about} width={24} height={24} alt="about" />Biz Kimiz ?</Link></li>
-                <li><Link className={styles.headerlink} href="/communication"><Image src={phone} width={24} height={24} alt="phone" />İletişim</Link></li>
+                <li>
+                    <Link className={styles.headerlink} href="/">
+                        <Image src={home} width={24} height={24} alt="home" />
+                        Anasayfa
+                    </Link>
+                </li>
+                 <li>
+                    <a
+                        className={styles.headerlink}
+                        href="https://sametetkinlik.site/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Image src={home} width={24} height={24} alt="game" />
+                        Lokasyon Oyun
+                    </a>
+                </li>
+                <li>
+                    <Link className={styles.headerlink} href="/ours">
+                        <Image src={about} width={24} height={24} alt="about" />
+                        Biz Kimiz ?
+                    </Link>
+                </li>
+                <li>
+                    <Link className={styles.headerlink} href="/communication">
+                        <Image src={phone} width={24} height={24} alt="phone" />
+                        İletişim
+                    </Link>
+                </li>
             </ul>
         </header>
     );
