@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1200); // Daha kısa süre, hızlı geçiş hissi
 
     return () => clearTimeout(timeout);
   }, []);
@@ -28,24 +28,33 @@ export default function Home() {
     <>
       <Head>
         <title>Lokasyon Matematik | Ankara Özel Ders</title>
-        <meta name="description" content="Ankara’da birebir matematik özel dersiyle başarıya ulaşın. Hemen ücretsiz deneme dersi alın!" />
-        <meta name="keywords" content="matematik özel ders, Ankara özel ders, LGS, AYT, TYT, KPSS, birebir ders" />
+        <meta
+          name="description"
+          content="Ankara’da birebir matematik özel dersiyle başarıya ulaşın. Hemen ücretsiz deneme dersi alın!"
+        />
+        <meta
+          name="keywords"
+          content="matematik özel ders, Ankara özel ders, LGS, AYT, TYT, KPSS, birebir ders"
+        />
         <meta name="robots" content="index, follow" />
-        {/* Sosyal medya meta */}
         <meta property="og:title" content="Lokasyon Matematik" />
-        <meta property="og:description" content="Başarıya giden yolda seninleyiz. Lokasyon Matematik ile hedefe ulaş!" />
+        <meta
+          property="og:description"
+          content="Başarıya giden yolda seninleyiz. Lokasyon Matematik ile hedefe ulaş!"
+        />
         <meta property="og:image" content="/header/sametmathsicon.svg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {isLoading ? (
-        <div className={styles.loaderWrapper}>
-          <div className={styles.loaderContent}>
-            <div className={styles.ring}></div>
-            <span className={styles.logoText}>Lokasyon Matematik</span>
-          </div>
+
+      <div className={`${styles.loaderWrapper} ${!isLoading ? styles.hidden : ""}`}>
+        <div className={styles.loaderContent}>
+          <div className={styles.ring}></div>
+          <span className={styles.logoText}>Lokasyon Matematik</span>
         </div>
-      ) : (
+      </div>
+
+      {!isLoading && (
         <main className={styles.main}>
           <MainSection />
           <Membership />
@@ -60,4 +69,3 @@ export default function Home() {
     </>
   );
 }
-
