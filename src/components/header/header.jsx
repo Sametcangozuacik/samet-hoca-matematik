@@ -7,6 +7,7 @@ import hamburger from '../../../public/header/hamburgermenuicon.svg';
 import logo from '../../../public/header/sametmathsicon.svg';
 import logo1 from '../../../public/header/sametmathsicon1.svg';
 import home from '../../../public/header/homeicon.svg';
+import game from '../../../public/header/gamesicon.png';
 import about from '../../../public/header/abouticon.svg';
 import phone from '../../../public/header/phoneicon.svg';
 import costumer from '../../../public/header/customericon.svg';
@@ -93,7 +94,7 @@ export default function Header() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Image src={home} width={24} height={24} alt="game" />
+                        <Image src={game} width={24} height={24} alt="game" />
                         Lokasyon Oyun
                     </a>
                 </li>
