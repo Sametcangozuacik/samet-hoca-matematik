@@ -92,98 +92,26 @@ export default function OurAchievements() {
                         <strong className={styles.studentName}>Ayşe Kaya:</strong> Ulusal matematik yarışmasında altın madalya kazandı.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Emre Şahin:</strong> YKS'de Matematik alanında Türkiye 3552.’sü oldu.
+                        <strong className={styles.studentName}>Emre Şahin:</strong> YKS&apos;de Matematik alanında Türkiye 3552.’sü oldu.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Mina Yıldız:</strong> ALES’te başarı puanıyla dikkat çekti.
+                        <strong className={styles.studentName}>Mina Yıldız:</strong> ALES&apos;te başarı puanıyla dikkat çekti.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Sefa Tan:</strong> KPSS’de matematik alanında en yüksek notu aldı.
+                        <strong className={styles.studentName}>Sefa Tan:</strong> KPSS&apos;de matematik alanında en yüksek notu aldı.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Kerem Öz:</strong> LGS’de tam puan alarak okul birincisi oldu.
+                        <strong className={styles.studentName}>Kerem Öz:</strong> LGS&apos;de tam puan alarak okul birincisi oldu.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Elif Demir:</strong> TYT’de 39 net, AYT’de 40 net yaptı, Türkiye sıralamasında ilk 1800’de yer aldı.
+                        <strong className={styles.studentName}>Elif Demir:</strong> TYT&apos;de 39 net, AYT&apos;de 40 net yaptı, Türkiye sıralamasında ilk 1800&apos;de yer aldı.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Burak Yılmaz:</strong> DGS’de Türkiye 215.’sü oldu.
+                        <strong className={styles.studentName}>Burak Yılmaz:</strong> DGS&apos;de Türkiye 215.’sü oldu.
                     </li>
                     <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Zeynep Kara:</strong> Uluslararası matematik olimpiyatlarında Türkiye’yi temsil etti.
+                        <strong className={styles.studentName}>Zeynep Kara:</strong> Uluslararası matematik olimpiyatlarında Türkiye&apos;yi temsil etti.
                     </li>
-                </ul>
-
-            </div>
-            <div className={styles.yearBlock}>
-                <h2 className={styles.yearTitle}>2024</h2>
-                <p className={styles.description}>
-                    Yeni projelerimiz ve genişleyen ekibimizle daha fazla öğrenciye destek olduk:
-                </p>
-                <ul className={styles.studentList}>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Deniz Çetin:</strong> Ulusal matematik yarışmasında birincilik kazandı ve TÜBİTAK proje yarışmasında derece aldı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Ömer Faruk Yılmaz:</strong> YKS’de Türkiye 1800.’sü oldu ve üniversite sınavında tam burs hakkı kazandı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Zeynep Kılıç:</strong> ALES’te sayısal puanla 92 aldı, yüksek lisans bursu kazandı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Furkan Demir:</strong> KPSS’de matematik alanında Türkiye genelinde ilk 140’ye girdi ve devlet memuru oldu.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Emircan Kaya:</strong> DGS’de Türkiye 295.’si oldu, sayısal testte tam puan yaptı ve yüksek başarı gösterdi.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>İlayda Şahin:</strong> Türkiye sıralamasında ilk 5000’de yer aldı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Murat Yıldırım:</strong> LGS’de tüm soruları doğru yanıtlayarak okul birincisi oldu ve bölge derecesi aldı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Nazlı Güneş:</strong> KPSS 90 puan alarak en yüksek notu aldı ve atanmayı garantiledi.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Batuhan Özcan:</strong> YKS’de matematik alanında Türkiye ilk 1200’de yer aldı, tam burs kazandı ve üniversitede aktif kulüp üyesi oldu.
-                    </li>
-                </ul>
-            </div>
-            <div className={styles.yearBlock}>
-                <h2 className={styles.yearTitle}>2025</h2>
-                <p className={styles.description}>
-                    Sistemize kayıtlı 150 öğrenci ile eğitimlerimize devam ediyoruz ve başarılarımızı artırıyoruz:
-                </p>
-                <ul className={styles.studentList}>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>İrem Özkan:</strong> Ulusal matematik yarışmasında altın madalya kazandı, ayrıca bölge birincisi oldu ve TÜBİTAK bilim fuarında derece aldı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Baran Yıldırım:</strong> YKS’de Türkiye 1200.’sü oldu, TYT’de 40 net yaptı ve üniversite tercihlerinde tam burs kazandı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Selin Karaca:</strong> ALES’te sayısal puanla 95 üstü alarak bölüm birincisi oldu, akademik makale yayınladı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Kerem Demir:</strong> KPSS’de  Türkiye genelinde ilk 189.'inci girerek en yüksek notu aldı, alanında uzmanlaşmak üzere yüksek lisans bursu kazandı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Buse Eroğlu:</strong> Uluslararası matematik olimpiyatlarında Türkiye’yi temsil etti, bronz madalya kazandı ve matematik alanında seçkin yaz kamplarına davet edildi.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Mert Yalçın:</strong> DGS’de Türkiye 100.’sü oldu, hem sayısal hem sözel testlerde yüksek başarı gösterdi.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Elif Demirtaş:</strong> TYT’de 39 net, AYT’de 40 net yaptı, Türkiye sıralamasında ilk 1500’de yer aldı.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Sena Karabulut:</strong> LGS’de tam puanla okul birincisi oldu, matematik alanında Türkiye genelinde ilk 50’ye girdi.
-                    </li>
-                    <li className={styles.studentItem}>
-                        <strong className={styles.studentName}>Deniz Yılmaz:</strong> TYT’de 38 net, AYT’de 39 net yaptı, Türkiye sıralamasında ilk 2000’de yer aldı ve tam burs kazandı.
-                    </li>
-
                 </ul>
             </div>
         </section>
