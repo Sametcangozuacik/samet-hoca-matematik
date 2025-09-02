@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Head from "next/head";  // <-- buraya ekle
+import Head from "next/head";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import styles from "./globals.module.scss";
@@ -22,12 +22,18 @@ export default function RootLayout({ children, pageMetadata = {} }) {
 
   return (
     <html lang="tr" className={styles.root}>
-      <Head>  {/* burada <head> değil <Head> olmalı */}
+      <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={metadata.openGraph.url} />
+
+        {/* ✅ Google Site Verification */}
+        <meta
+          name="google-site-verification"
+          content="google11e5491cd3f09394"
+        />
 
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
@@ -43,7 +49,7 @@ export default function RootLayout({ children, pageMetadata = {} }) {
         <meta name="twitter:image" content={metadata.twitter.image} />
 
         {/* Favicon */}
-        <link rel="icon" href="./public/Titleicon.ico" />
+        <link rel="icon" href="/Titleicon.ico" />
 
         {/* JSON-LD */}
         <script
