@@ -29,12 +29,6 @@ export default function RootLayout({ children, pageMetadata = {} }) {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={metadata.openGraph.url} />
 
-        {/* ✅ Google Site Verification */}
-        <meta
-          name="google-site-verification"
-          content="google11e5491cd3f09394"
-        />
-
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
