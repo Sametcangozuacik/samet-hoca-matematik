@@ -1,56 +1,72 @@
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import styles from "./globals.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const defaultMetadata = {
-  // ... metadata aynı
+// Metadata API (Next.js 13+)
+export const metadata = {
+  title: "Lokasyon Matematik | Ankara Özel Ders",
+  description:
+    "Ankara’da birebir matematik özel dersiyle başarıya ulaşın. Hemen ücretsiz deneme dersi alın!",
+  keywords:
+    "matematik özel ders, Ankara özel ders, LGS, AYT, TYT, KPSS, birebir ders",
+  openGraph: {
+    title: "Lokasyon Matematik",
+    description:
+      "Başarıya giden yolda seninleyiz. Lokasyon Matematik ile hedefe ulaş!",
+    url: "https://lokasyonmatematik.com.tr",
+    type: "website",
+    images: [
+      {
+        url: "https://lokasyonmatematik.com.tr/header/sametmathsicon.png", // PNG önerilir
+        width: 1200,
+        height: 630,
+        alt: "Lokasyon Matematik Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lokasyon Matematik",
+    description:
+      "Başarıya giden yolda seninleyiz. Lokasyon Matematik ile hedefe ulaş!",
+    images: ["https://lokasyonmatematik.com.tr/header/sametmathsicon.png"],
+  },
+  icons: {
+    icon: "/Titleicon.ico",
+  },
 };
 
-const mergeMetadata = (customMetadata = {}) => ({
-  ...defaultMetadata,
-  ...customMetadata,
-  openGraph: { ...defaultMetadata.openGraph, ...customMetadata.openGraph },
-  twitter: { ...defaultMetadata.twitter, ...customMetadata.twitter },
-});
-
-export default function RootLayout({ children, pageMetadata = {} }) {
-  const metadata = mergeMetadata(pageMetadata);
-
+export default function RootLayout({ children }) {
   return (
     <html lang="tr" className={styles.root}>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={metadata.openGraph.url} />
+      <head>
+        {/* Canonical */}
+        <link rel="canonical" href="https://lokasyonmatematik.com.tr" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:image" content={metadata.openGraph.image} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:type" content={metadata.openGraph.type} />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.image} />
-
-        {/* Favicon */}
-        <link rel="icon" href="/Titleicon.ico" />
-
-        {/* JSON-LD */}
+        {/* JSON-LD Schema (Google için) */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "Lokasyon Matematik",
+              url: "https://lokasyonmatematik.com.tr",
+              logo: "https://lokasyonmatematik.com.tr/header/sametmathsicon.png",
+              description:
+                "Ankara’da birebir matematik özel dersiyle başarıya ulaşın. Hemen ücretsiz deneme dersi alın!",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Ankara",
+                addressCountry: "TR",
+              },
+            }),
+          }}
         />
-      </Head>
+      </head>
 
       <body className={inter.className}>
         <Header />
