@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import SplitText from "../splittext/SplitText";
+import SplitText from "../splittext/splitText.jsx";
 import section from "../../../public/Privatetuition/privatetuition.png";
 import styles from "./mainsection.module.scss";
 
