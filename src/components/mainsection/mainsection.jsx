@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import SplitText from "../splittext/SplitText.jsx"; // ✅ Dosya adı ile birebir uyumlu
+import SplitText from "../splittext/splittext.jsx"; // ✅ Dosya adı ile birebir uyumlu
 import section from "../../../public/Privatetuition/privatetuition.png";
 import styles from "./mainsection.module.scss";
 
