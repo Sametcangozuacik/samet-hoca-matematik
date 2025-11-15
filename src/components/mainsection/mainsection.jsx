@@ -73,7 +73,6 @@ export default function MainSection() {
             Bize Ulaşın
           </a>
         </div>
-
         <div>
           <Image
             src={section}
